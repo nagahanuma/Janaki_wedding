@@ -19,7 +19,7 @@ Once GitHub Pages is enabled:
   1. **Reception & Dinner:** Sunday, November 15, 2026 (7:00 PM onwards)
   2. **Upanayanam Ceremony:** Monday, November 16, 2026 (4:00 AM – 5:00 AM)
   3. **Wedding Muhurtham:** Monday, November 16, 2026 (5:00 AM – 6:00 AM) with Kalyana Virundhu (Wedding Feast)
-  - One-click **Google Maps navigation** and downloadable **`.ics` calendar reminders**.
+  - One-click **Google Maps navigation** and direct **Google Calendar integration** (zero file downloads).
 - **One-Tap WhatsApp RSVP:** Guests can select their attendance and confirm directly with a pre-filled WhatsApp message.
 - **Interactive Audio & Falling Flower Petals:** HTML5 marigold and jasmine flower petals canvas rain with floating ambient music toggle.
 - **Mobile-First Luxury Aesthetic:** Sabyasachi Royal Carmine, Imperial Temple Emerald, Champagne Gold, and Pearl Silk Cream palette.
@@ -34,3 +34,4 @@ Once GitHub Pages is enabled:
 5. Click **Save**.
 6. Within 1–2 minutes, your wedding invitation website will be live at:
    `https://nagahanuma.github.io/Janaki_wedding/`
+

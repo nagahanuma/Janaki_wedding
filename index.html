@@ -864,7 +864,7 @@
             </a>
 
             <!-- Add to Calendar Button -->
-            <button onclick="downloadReceptionICS()"
+            <button onclick="addToCalendarReception()"
               class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-maroon text-gold hover:bg-[#6E0A1B] transition-all text-xs font-semibold shadow-sm">
               <span class="mr-1.5 text-sm">📅</span>
               <span data-i18n="addToCalendar">Add to Calendar</span>
@@ -925,7 +925,7 @@
               <span class="mr-1.5 text-sm">📍</span>
               <span data-i18n="navigate">Navigate</span>
             </a>
-            <button onclick="downloadUpanayanamICS()"
+            <button onclick="addToCalendarUpanayanam()"
               class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-maroon text-gold hover:bg-[#6E0A1B] transition-all text-xs font-semibold shadow-sm">
               <span class="mr-1.5 text-sm">📅</span>
               <span data-i18n="addToCalendar">Add to Calendar</span>
@@ -1009,7 +1009,7 @@
             </a>
 
             <!-- Add to Calendar Button -->
-            <button onclick="downloadMuhurthamICS()"
+            <button onclick="addToCalendarMuhurtham()"
               class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-gradient-to-r from-gold via-turmeric to-gold text-maroon font-bold hover:shadow-lg transition-all text-xs shadow-sm">
               <span class="mr-1.5 text-sm">📅</span>
               <span data-i18n="addToCalendar">Add to Calendar</span>
@@ -1633,67 +1633,47 @@
     updateCountdown();
 
     /* ==========================================================================
-       7. ADD TO CALENDAR (.ICS FILE CREATION & DOWNLOAD)
+       7. ADD TO CALENDAR (DIRECT ZERO-DOWNLOAD GOOGLE CALENDAR INTEGRATION)
        ========================================================================== */
-    function triggerDownloadICS(filename, icsContent) {
-      const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8;' });
-      const link = document.createElement('a');
-      link.href = window.URL.createObjectURL(blob);
-      link.setAttribute('download', filename);
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+    function openGoogleCalendar(title, startUTC, endUTC, details, location) {
+      const calUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startUTC}/${endUTC}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
+      window.open(calUrl, '_blank', 'noopener,noreferrer');
     }
 
-    function downloadReceptionICS() {
-      const ics = [
-        'BEGIN:VCALENDAR',
-        'VERSION:2.0',
-        'BEGIN:VEVENT',
-        'DTSTART:20261115T133000Z',
-        'DTEND:20261115T183000Z',
-        'SUMMARY:Sai Dinesh & Janaki - Reception & Dinner',
-        'LOCATION:Sengundhar Samudhaya Thirumana Mandapam, Sholinghur',
-        'DESCRIPTION:Reception & Dinner - 15 Nov 2026, 7:00 PM, Sengundhar Samudhaya Thirumana Mandapam, Sholinghur',
-        'END:VEVENT',
-        'END:VCALENDAR'
-      ].join('\r\n');
-
-      triggerDownloadICS('SaiDinesh_Janaki_Reception.ics', ics);
+    function addToCalendarReception() {
+      openGoogleCalendar(
+        'Sai Dinesh & Janaki - Reception & Dinner',
+        '20261115T133000Z',
+        '20261115T173000Z',
+        'You are cordially invited to the Reception & Dinner of V.P. Sai Dinesh & R. Janaki on Sunday, November 15, 2026 from 7:00 PM onwards at Sengundhar Samudhaya Thirumana Mandapam, Sholinghur.',
+        'Sengundhar Samudhaya Thirumana Mandapam, Sholinghur, Tamil Nadu'
+      );
     }
 
-    function downloadUpanayanamICS() {
-      const ics = [
-        'BEGIN:VCALENDAR',
-        'VERSION:2.0',
-        'BEGIN:VEVENT',
-        'DTSTART:20261115T223000Z',
-        'DTEND:20261115T233000Z',
-        'SUMMARY:Sai Dinesh & Janaki - Upanayanam Ceremony',
-        'LOCATION:Sengundhar Samudhaya Thirumana Mandapam, Sholinghur',
-        'DESCRIPTION:Upanayanam (Sacred Thread Ceremony) - 16 Nov 2026, 4:00 AM to 5:00 AM IST',
-        'END:VEVENT',
-        'END:VCALENDAR'
-      ].join('\r\n');
-      triggerDownloadICS('SaiDinesh_Janaki_Upanayanam.ics', ics);
+    function addToCalendarUpanayanam() {
+      openGoogleCalendar(
+        'Sai Dinesh & Janaki - Upanayanam Ceremony',
+        '20261115T223000Z',
+        '20261115T233000Z',
+        'Sacred Upanayanam ceremony of V.P. Sai Dinesh on Monday, November 16, 2026 from 4:00 AM to 5:00 AM at Sengundhar Samudhaya Thirumana Mandapam, Sholinghur.',
+        'Sengundhar Samudhaya Thirumana Mandapam, Sholinghur, Tamil Nadu'
+      );
     }
 
-    function downloadMuhurthamICS() {
-      const ics = [
-        'BEGIN:VCALENDAR',
-        'VERSION:2.0',
-        'BEGIN:VEVENT',
-        'DTSTART:20261115T223000Z',
-        'DTEND:20261116T003000Z',
-        'SUMMARY:Sai Dinesh & Janaki - Wedding Muhurtham',
-        'LOCATION:Sengundhar Samudhaya Thirumana Mandapam, Sholinghur',
-        'DESCRIPTION:Upanayanam 4:00 AM - 5:00 AM | Muhurtham 5:00 AM - 6:00 AM | Sengundhar Samudhaya Thirumana Mandapam, Sholinghur',
-        'END:VEVENT',
-        'END:VCALENDAR'
-      ].join('\r\n');
-
-      triggerDownloadICS('SaiDinesh_Janaki_Muhurtham.ics', ics);
+    function addToCalendarMuhurtham() {
+      openGoogleCalendar(
+        '💍 Sai Dinesh & Janaki - Auspicious Wedding Muhurtham',
+        '20261115T233000Z',
+        '20261116T023000Z',
+        'Auspicious Wedding Ceremony (Muhurtham 5:00 AM – 6:00 AM) of V.P. Sai Dinesh & R. Janaki followed by traditional Kalyana Virundhu (Wedding Feast).',
+        'Sengundhar Samudhaya Thirumana Mandapam, Sholinghur, Tamil Nadu'
+      );
     }
+
+    // Compatibility aliases to prevent any downloads
+    function downloadReceptionICS() { addToCalendarReception(); }
+    function downloadUpanayanamICS() { addToCalendarUpanayanam(); }
+    function downloadMuhurthamICS() { addToCalendarMuhurtham(); }
 
     /* ==========================================================================
        8. WHATSAPP RSVP HANDLER
