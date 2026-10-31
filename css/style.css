@@ -1,0 +1,252 @@
+:root {
+      --maroon: #9E1329;
+      --maroon-dark: #6E0A1B;
+      --maroon-deep: #450410;
+      --rose: #D62246;
+      --emerald: #0D4735;
+      --emerald-dark: #062B1F;
+      --amber: #B84E0B;
+      --gold: #D4AF37;
+      --gold-light: #F7E8A4;
+      --gold-shimmer: #FFF1B8;
+      --cream: #FAF7F2;
+      --cream-soft: #F4EFE6;
+      --cream-card: #FFFFFF;
+      --turmeric: #E8890A;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #160308;
+      background-image:
+        radial-gradient(ellipse at 50% 12%, #380816 0%, #160308 65%),
+        radial-gradient(circle at 12% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 45%),
+        radial-gradient(circle at 88% 50%, rgba(13, 71, 53, 0.06) 0%, transparent 45%);
+      font-family: 'Poppins', sans-serif;
+      color: #2D2522;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Modern Luxury Mobile Shell on Desktop */
+    #app {
+      max-width: 480px;
+      margin: 0 auto;
+      background: #FAF7F2;
+      background-image: linear-gradient(180deg, #FFFDFB 0%, #FAF7F2 35%, #F4EFE6 100%);
+      min-height: 100vh;
+      position: relative;
+      box-shadow: 0 25px 65px -12px rgba(0, 0, 0, 0.5), 0 0 45px rgba(212, 175, 55, 0.12);
+      padding-bottom: 95px;
+      overflow: hidden;
+    }
+
+    /* Gold text shimmering effect */
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #FFE494 0%, #D4AF37 50%, #997316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-gold-bright {
+      background: linear-gradient(135deg, #FFF6D1 0%, #F5E6A3 45%, #D4AF37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Ornate Gold Border */
+    .ornate-gold-border {
+      border: 2px solid #D4AF37;
+      box-shadow: 0 0 0 2px #C0182A, 0 0 0 4px #D4AF37;
+    }
+
+    /* Welcome Doors Animation */
+    .door-left,
+    .door-right {
+      transition: transform 1.1s cubic-bezier(0.77, 0, 0.175, 1);
+      will-change: transform;
+    }
+
+    .doors-open .door-left {
+      transform: translateX(-100%);
+    }
+
+    .doors-open .door-right {
+      transform: translateX(100%);
+    }
+
+    .doors-open .gate-center-content {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    /* Rotating Halo */
+    @keyframes rotateHalo {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .animate-spin-slow {
+      animation: rotateHalo 24s linear infinite;
+    }
+
+    .ganesha-halo-glow {
+      filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.85));
+    }
+
+    /* Floating Couple Animation */
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    /* Gentle Pulse */
+    @keyframes pulseSoft {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.05);
+        opacity: 0.92;
+      }
+    }
+
+    .animate-pulse-soft {
+      animation: pulseSoft 2.5s ease-in-out infinite;
+    }
+
+    /* Digit Flip / Pop Animation */
+    .digit-box {
+      perspective: 400px;
+      transition: transform 0.25s ease;
+    }
+
+    .digit-box.flip {
+      animation: popDigit 0.35s ease;
+    }
+
+    @keyframes popDigit {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.15);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Glassmorphism card */
+    .glass-card {
+      background: rgba(255, 253, 247, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+    }
+
+    .glass-dark {
+      background: rgba(192, 24, 42, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+    }
+
+    /* Toran Garland Pattern */
+    .toran-garland {
+      background-image: radial-gradient(circle at 10px 0px, #E8890A 7px, transparent 8px),
+        radial-gradient(circle at 20px 0px, #C0182A 6px, transparent 7px);
+      background-size: 20px 14px;
+      height: 14px;
+    }
+
+    /* South Indian Kolam motif dividers */
+    .kolam-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .kolam-divider::before,
+    .kolam-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #D4AF37, transparent);
+    }
+
+    /* Canvas styling */
+    #petalCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 25;
+    }
+
+    /* Soundwaves animation on audio button */
+    @keyframes soundwave {
+
+      0%,
+      100% {
+        height: 4px;
+      }
+
+      50% {
+        height: 16px;
+      }
+    }
+
+    .wave-bar-1 {
+      animation: soundwave 1s ease-in-out infinite;
+    }
+
+    .wave-bar-2 {
+      animation: soundwave 0.8s ease-in-out infinite 0.2s;
+    }
+
+    .wave-bar-3 {
+      animation: soundwave 1.2s ease-in-out infinite 0.4s;
+    }
+
+    /* Safe Area Inset Support */
+    .safe-bottom {
+      padding-bottom: max(12px, env(safe-area-inset-bottom));
+    }

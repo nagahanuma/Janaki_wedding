@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="te" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>వి.పి. సాయి దినేష్ & ఆర్. జానకి వివాహ ఆహ్వాన పత్రిక 💍</title>
+  
+  <!-- WhatsApp & Social Media Preview Cards -->
+  <meta property="og:title" content="వి.పి. సాయి దినేష్ & ఆర్. జానకి వివాహ ఆహ్వాన పత్రిక 💍">
+  <meta property="og:description" content="తేదీ: నవంబర్ 15 & 16, 2026 • వేదిక: శెంగుందర్ సముదాయ తిరుమణ మండపం, శోళింగూర్. మా వివాహ వేడుకకు మిమ్ములను సకుటుంబ సపరివార సమేతంగా ఆహ్వానిస్తున్నాము. 🌸">
+  <meta property="og:image" content="couple_cute.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Modular Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-telugu antialiased bg-[#1a0507] text-[#332211] min-h-screen relative overflow-x-hidden selection:bg-rose selection:text-white">
+
+  <!-- Desktop Pattern Backdrop Wrapper -->
+  <div class="desktop-bg min-h-screen w-full flex justify-center items-start sm:py-6">
+    
+    <!-- Mobile App Container (390px - 440px viewport optimal) -->
+    <main class="w-full max-w-[440px] bg-cream min-h-screen relative shadow-2xl overflow-hidden pb-24 border-x border-gold/30">
+
+      <!-- Falling Flower Petals Canvas -->
+      <canvas id="petalCanvas"></canvas>
+
+      <!-- Auspicious Background Music Player -->
+      <audio id="bgAudio" loop preload="none">
+        <source src="audio/nadaswaram.mp3" type="audio/mpeg">
+      </audio>
+
+      <!-- Floating Music Toggle Button -->
+      <button onclick="toggleAudio()" aria-label="సంగీతం మార్చండి" class="music-toggle-btn group">
+        <span id="audioIcon" class="text-base group-hover:scale-110 transition-transform">🔇</span>
+        <div id="soundwaveBars" class="soundwave hidden">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </button>
+
+      <!-- ==========================================
+           1. WELCOME GATE OVERLAY (Traditional Temple Door)
+           ========================================== -->
+      <div id="welcomeGate" class="gate-overlay">
+        <div class="door door-left"></div>
+        <div class="door door-right"></div>
+        
+        <div class="gate-content">
+          <!-- Traditional Kolam & Sacred Kalash Motif -->
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full border-2 border-gold flex items-center justify-center bg-maroon-dark/90 shadow-lg shadow-gold/20 animate-pulse">
+            <span class="text-3xl filter drop-shadow">🪔</span>
+          </div>
+
+          <p class="font-telugu text-sm uppercase tracking-widest text-gold-shimmer mb-1 font-semibold">శుభ వివాహ మహోత్సవం</p>
+          <h2 class="font-playfair text-2xl font-bold text-white mb-2 tracking-wide">సాయి దినేష్ & జానకి</h2>
+          
+          <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-4"></div>
+
+          <!-- Language Selector Pills on Gate -->
+          <p class="text-xs text-gold/80 font-telugu mb-2">భాషను ఎంచుకోండి:</p>
+          <div class="flex items-center gap-2 mb-6">
+            <a href="index.html" class="px-3 py-1 rounded-full text-xs font-semibold bg-maroon-dark/80 text-gold border border-gold/40 hover:bg-gold/20 font-poppins">English</a>
+            <a href="tamil.html" class="px-3 py-1 rounded-full text-xs font-semibold bg-maroon-dark/80 text-gold border border-gold/40 hover:bg-gold/20 font-tamil">தமிழ்</a>
+            <a href="telugu.html" class="px-3 py-1 rounded-full text-xs font-semibold bg-gold text-maroon shadow-md font-telugu">తెలుగు</a>
+          </div>
+
+          <!-- Open Gate Button -->
+          <button onclick="openGate()" class="gate-btn group">
+            <span class="relative z-10 flex items-center gap-2">
+              <span class="text-lg">✨</span>
+              <span>ఆహ్వాన పత్రికను తెరవండి</span>
+              <span class="text-lg">✨</span>
+            </span>
+          </button>
+          
+          <p class="text-[11px] text-gold/70 mt-3 font-telugu tracking-wider">సాంప్రదాయ శుభ వివాహ ఆహ్వానాన్ని తిలకించండి</p>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           2. TOP LANGUAGE BAR (Sticky Switcher)
+           ========================================== -->
+      <div class="sticky top-0 z-30 w-full py-2 px-3 flex justify-center items-center pointer-events-none">
+        <div class="inline-flex items-center bg-black/40 backdrop-blur-md p-1 rounded-full border border-gold/40 shadow-lg pointer-events-auto">
+          <a href="index.html" class="px-3 py-1 rounded-full text-xs font-semibold text-gold/80 hover:text-white transition font-poppins">English</a>
+          <a href="tamil.html" class="px-3 py-1 rounded-full text-xs font-semibold text-gold/80 hover:text-white transition font-tamil">தமிழ்</a>
+          <a href="telugu.html" class="px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-amber to-maroon text-gold-shimmer shadow-sm font-telugu">తెలుగు</a>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           3. DIVINE BLESSINGS HEADER (Lord Shloka)
+           ========================================== -->
+      <section id="blessings" class="pt-2 pb-4 px-4 text-center relative">
+        <div class="inline-block relative">
+          <!-- Golden Halo Background -->
+          <div class="absolute inset-0 rounded-full bg-gold/20 blur-xl scale-125 animate-pulse"></div>
+          
+          <!-- Sacred Shloka Motif -->
+          <div class="relative w-16 h-16 mx-auto rounded-full border border-gold/60 p-1 bg-cream-card shadow-md flex items-center justify-center">
+            <div class="w-full h-full rounded-full border border-dashed border-amber flex items-center justify-center bg-gradient-to-br from-cream to-gold-shimmer/30">
+              <span class="text-2xl filter drop-shadow">🕉️</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <p class="font-telugu text-sm text-maroon font-bold tracking-wide">
+            || శ్రీ మద్విరాట్ విశ్వబ్రాహ్మణే నమః ||
+          </p>
+          <div class="w-32 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto my-2"></div>
+          <h1 class="font-playfair text-2xl font-extrabold text-maroon-dark tracking-wide">
+            వివాహ ఆహ్వాన పత్రిక
+          </h1>
+          <p class="text-xs text-[#6e4e37] font-telugu mt-1 max-w-xs mx-auto leading-relaxed">
+            మా వివాహ మహోత్సవానికి మిమ్ములను సకుటుంబ సపరివార సమేతంగా ఆహ్వానిస్తున్నాము
+          </p>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           4. HERO COUPLE SECTION (Cute 3D Cartoon Art)
+           ========================================== -->
+      <section class="px-4 py-2 relative">
+        <div class="mandapam-frame relative rounded-3xl p-4 bg-gradient-to-b from-[#FFF9EE] to-cream shadow-xl border-2 border-gold/40">
+          
+          <!-- Decorative Toran & Flower Festoons -->
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-4/5 flex justify-around pointer-events-none">
+            <span class="text-xs filter drop-shadow">🌼</span>
+            <span class="text-xs filter drop-shadow">🍃</span>
+            <span class="text-xs filter drop-shadow">🌸</span>
+            <span class="text-xs filter drop-shadow">🍃</span>
+            <span class="text-xs filter drop-shadow">🌼</span>
+          </div>
+
+          <!-- Cute Cartoon Couple Illustration in Mandapam Arch -->
+          <div class="relative w-full rounded-2xl overflow-hidden border border-gold/50 shadow-inner bg-gradient-to-b from-amber-50 to-white/80">
+            <img 
+              src="couple_arched.webp" 
+              onerror="this.onerror=null;this.src='couple_arched.png';" 
+              alt="సాయి దినేష్ మరియు జానకి వధూవరులు" 
+              class="w-full h-auto object-cover couple-float block"
+              loading="eager"
+            />
+          </div>
+
+          <!-- Couple Names & Traditional Details -->
+          <div class="text-center mt-4">
+            <h2 class="font-playfair text-2xl font-black text-maroon tracking-wide">
+              వి.పి. సాయి దినేష్
+            </h2>
+            <div class="flex items-center justify-center gap-2 my-1">
+              <span class="h-px w-8 bg-gold"></span>
+              <span class="text-xs font-telugu italic text-amber font-semibold">మరియు</span>
+              <span class="h-px w-8 bg-gold"></span>
+            </div>
+            <h2 class="font-playfair text-2xl font-black text-maroon tracking-wide">
+              ఆర్. జానకి
+            </h2>
+
+            <!-- Blessings Note -->
+            <p class="text-xs text-[#553b28] font-telugu mt-3 px-2 leading-relaxed bg-gold/10 py-2.5 rounded-xl border border-gold/30">
+              "మా చిరంజీవుల శుభ వివాహ మహోత్సవానికి విచ్చేసి, నూతన వధూవరులను ఆశీర్వదించవలసిందిగా మిమ్ములను, మీ కుటుంబ సభ్యులను సాదరంగా ఆహ్వానిస్తున్నాము."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           5. LIVE COUNTDOWN TIMER
+           ========================================== -->
+      <section class="px-4 py-4">
+        <div class="bg-gradient-to-r from-maroon via-maroon-dark to-maroon rounded-2xl p-4 text-center text-white shadow-lg border border-gold/50 relative overflow-hidden">
+          <div class="absolute -right-8 -top-8 w-24 h-24 rounded-full bg-gold/10 blur-xl pointer-events-none"></div>
+          
+          <div class="flex items-center justify-center gap-2 mb-3">
+            <span class="text-gold text-sm">⏳</span>
+            <span class="font-telugu text-xs uppercase tracking-widest text-gold-shimmer font-bold">
+              శుభ ముహూర్తానికి సమయం
+            </span>
+            <span class="text-gold text-sm">⏳</span>
+          </div>
+
+          <div class="grid grid-cols-4 gap-2">
+            <!-- Days -->
+            <div id="box-days" class="countdown-card rounded-xl p-2 border border-gold/30">
+              <span id="timer-days" class="block font-playfair text-xl font-bold text-gold-shimmer">00</span>
+              <span class="text-[10px] uppercase font-telugu text-cream/90 font-medium">రోజులు</span>
+            </div>
+            <!-- Hours -->
+            <div id="box-hours" class="countdown-card rounded-xl p-2 border border-gold/30">
+              <span id="timer-hours" class="block font-playfair text-xl font-bold text-gold-shimmer">00</span>
+              <span class="text-[10px] uppercase font-telugu text-cream/90 font-medium">గంటలు</span>
+            </div>
+            <!-- Minutes -->
+            <div id="box-minutes" class="countdown-card rounded-xl p-2 border border-gold/30">
+              <span id="timer-minutes" class="block font-playfair text-xl font-bold text-gold-shimmer">00</span>
+              <span class="text-[10px] uppercase font-telugu text-cream/90 font-medium">నిమిషాలు</span>
+            </div>
+            <!-- Seconds -->
+            <div id="box-seconds" class="countdown-card rounded-xl p-2 border border-gold/30">
+              <span id="timer-seconds" class="block font-playfair text-xl font-bold text-gold-shimmer">00</span>
+              <span class="text-[10px] uppercase font-telugu text-cream/90 font-medium">సెకన్లు</span>
+            </div>
+          </div>
+
+          <p class="text-[11px] text-gold/80 mt-3 font-telugu">
+            సోమవారం, నవంబర్ 16, 2026 • తెల్లవారుజామున 5:00 గంటలకు
+          </p>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           6. EVENT TIMELINE & DINING CARDS
+           ========================================== -->
+      <section id="events" class="px-4 py-2 space-y-4">
+        
+        <div class="text-center mb-2">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber font-telugu">శుభకార్య వేడుకలు</span>
+          <h3 class="font-playfair text-xl font-bold text-maroon-dark">కార్యక్రమాల వివరాలు</h3>
+          <div class="w-16 h-0.5 bg-gold mx-auto mt-1"></div>
+        </div>
+
+        <!-- 1. Reception & Dinner Card -->
+        <div class="timeline-card rounded-2xl p-4 bg-cream-card border-2 border-gold/40 shadow-md">
+          <div class="flex items-start gap-3">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-rose to-maroon text-white flex items-center justify-center text-xl shadow-md shrink-0 border border-gold/50">
+              🏛️
+            </div>
+            <div class="flex-1">
+              <span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-bold bg-rose/15 text-rose border border-rose/30 mb-1">
+                శుభ ప్రారంభం
+              </span>
+              <h4 class="font-playfair text-lg font-bold text-maroon-dark">రిసెప్షన్ & విందు</h4>
+              <p class="text-xs font-semibold text-[#442c1d] font-telugu mt-0.5">
+                📅 15-11-2026 ఆదివారం
+              </p>
+              <p class="text-xs text-amber font-semibold font-telugu">
+                ⏰ సాయంత్రం 7.00 గంటల నుండి
+              </p>
+              <p class="text-xs text-[#553b28] font-telugu mt-1">
+                📍 శెంగుందర్ సముదాయ తిరుమణ మండపం, శోళింగూర్
+              </p>
+              <div class="mt-2 py-1.5 px-2.5 rounded-lg bg-cream border border-gold/40 text-[11px] text-[#442c1d] flex items-center gap-1.5 font-telugu">
+                <span>🍽️</span>
+                <span>రాత్రి భోజన విందు: రాత్రి 7:30 నుండి</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-gold/30">
+            <a 
+              href="https://maps.google.com/?q=Sengundhar+Samudhaya+Thirumana+Mandapam+Sholinghur" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-cream border border-maroon text-maroon hover:bg-maroon hover:text-white transition-all text-xs font-semibold shadow-sm font-telugu">
+              <span>📍 మ్యాప్ చూడండి</span>
+            </a>
+            <button 
+              onclick="addToCalendarReception()" 
+              class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-gradient-to-r from-maroon to-maroon-dark text-gold-shimmer hover:brightness-110 transition-all text-xs font-semibold shadow-sm font-telugu">
+              <span>📅 క్యాలెండర్‌లో జోడించండి</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Upanayanam Card -->
+        <div class="timeline-card rounded-2xl p-4 bg-cream-card border-2 border-gold/40 shadow-md">
+          <div class="flex items-start gap-3">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber to-maroon text-white flex items-center justify-center text-xl shadow-md shrink-0 border border-gold/50">
+              🪔
+            </div>
+            <div class="flex-1">
+              <span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber/15 text-amber border border-amber/30 mb-1">
+                పవిత్ర సంస్కారం
+              </span>
+              <h4 class="font-playfair text-lg font-bold text-maroon-dark">ఉపనయనం</h4>
+              <p class="text-xs font-semibold text-[#442c1d] font-telugu mt-0.5">
+                📅 16-11-2026 సోమవారం
+              </p>
+              <p class="text-xs text-amber font-semibold font-telugu">
+                ⏰ తెల్లవారుజామున 4.00 నుండి 5.00 గంటల వరకు
+              </p>
+              <p class="text-xs text-[#553b28] font-telugu mt-1">
+                📍 శెంగుందర్ సముదాయ తిరుమణ మండపం, శోళింగూర్
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-gold/30">
+            <a 
+              href="https://maps.google.com/?q=Sengundhar+Samudhaya+Thirumana+Mandapam+Sholinghur" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-cream border border-maroon text-maroon hover:bg-maroon hover:text-white transition-all text-xs font-semibold shadow-sm font-telugu">
+              <span>📍 మ్యాప్ చూడండి</span>
+            </a>
+            <button 
+              onclick="addToCalendarUpanayanam()" 
+              class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-gradient-to-r from-maroon to-maroon-dark text-gold-shimmer hover:brightness-110 transition-all text-xs font-semibold shadow-sm font-telugu">
+              <span>📅 క్యాలెండర్‌లో జోడించండి</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Muhurtham Card -->
+        <div class="timeline-card rounded-2xl p-4 bg-gradient-to-br from-cream-card to-[#FFF8E7] border-2 border-gold shadow-lg relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-gradient-to-l from-gold to-amber text-maroon font-bold text-[10px] py-1 px-3 rounded-bl-xl shadow-sm uppercase font-telugu">
+            మహా శుభ ముహూర్తం
+          </div>
+
+          <div class="flex items-start gap-3 mt-1">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold to-turmeric text-maroon flex items-center justify-center text-xl shadow-md shrink-0 border border-gold/70">
+              💍
+            </div>
+            <div class="flex-1">
+              <span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-bold bg-gold/30 text-maroon border border-gold/60 mb-1">
+                మాంగల్యధారణ
+              </span>
+              <h4 class="font-playfair text-xl font-black text-maroon-dark">కల్యాణ మహోత్సవం</h4>
+              <p class="text-xs font-semibold text-[#442c1d] font-telugu mt-0.5">
+                📅 16-11-2026 సోమవారం
+              </p>
+              <p class="text-xs text-rose font-bold font-telugu">
+                ⏰ ఉదయం 5.00 నుండి 6.00 గంటల వరకు
+              </p>
+              <p class="text-xs text-[#553b28] font-telugu mt-1">
+                📍 శెంగుందర్ సముదాయ తిరుమణ మండపం, శోళింగూర్
+              </p>
+              <div class="mt-2 py-1.5 px-2.5 rounded-lg bg-white/90 border border-gold/50 text-[11px] text-[#442c1d] flex items-center gap-1.5 font-telugu">
+                <span>🍛</span>
+                <span>కల్యాణ విందు భోజనం: ఉదయం 7:30 నుండి</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-gold/40">
+            <a 
+              href="https://maps.google.com/?q=Sengundhar+Samudhaya+Thirumana+Mandapam+Sholinghur" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-cream border border-maroon text-maroon hover:bg-maroon hover:text-white transition-all text-xs font-semibold shadow-sm font-telugu">
+              <span>📍 మ్యాప్ చూడండి</span>
+            </a>
+            <button 
+              onclick="addToCalendarMuhurtham()" 
+              class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-gradient-to-r from-maroon to-rose text-gold-shimmer hover:brightness-110 transition-all text-xs font-semibold shadow-sm font-telugu">
+              <span>📅 క్యాలెండర్‌లో జోడించండి</span>
+            </button>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ==========================================
+           7. VENUE & GOOGLE MAPS SECTION
+           ========================================== -->
+      <section id="map" class="px-4 py-3">
+        <div class="rounded-2xl p-4 bg-cream-card border-2 border-gold/40 shadow-md">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-lg">🏛️</span>
+            <h3 class="font-playfair text-lg font-bold text-maroon-dark">కల్యాణ మండపం వేదిక</h3>
+          </div>
+          
+          <h4 class="font-bold text-sm text-[#332211] font-telugu">
+            శెంగుందర్ సముదాయ తిరుమణ మండపం
+          </h4>
+          <p class="text-xs text-[#553b28] font-telugu mt-1 leading-relaxed">
+            శోళింగూర్, రాణిపేట జిల్లా, తమిళనాడు – 631102
+          </p>
+
+          <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-[#442c1d] font-telugu">
+            <span class="px-2.5 py-1 rounded-full bg-cream border border-gold/40">🚗 వాహనాల పార్కింగ్ సదుపాయం కలదు</span>
+            <span class="px-2.5 py-1 rounded-full bg-cream border border-gold/40">❄️ విశాలమైన కల్యాణ మండపం</span>
+          </div>
+
+          <div class="mt-4">
+            <a 
+              href="https://maps.google.com/?q=Sengundhar+Samudhaya+Thirumana+Mandapam+Sholinghur" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-light to-emerald text-white text-xs font-bold shadow-md hover:brightness-110 transition-all font-telugu">
+              <span>🧭 గూగుల్ మ్యాప్స్ లో మార్గాన్ని చూడండి</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           8. ONE-TAP WHATSAPP RSVP SECTION
+           ========================================== -->
+      <section id="rsvp" class="px-4 py-3">
+        <div class="rounded-2xl p-4 bg-gradient-to-b from-cream-card to-[#FFFDF9] border-2 border-gold/50 shadow-lg">
+          <div class="text-center mb-3">
+            <span class="text-xs font-bold uppercase tracking-widest text-emerald font-telugu">రాక నిర్ధారణ</span>
+            <h3 class="font-playfair text-xl font-bold text-maroon-dark">మీ రాకను తెలియజేయండి</h3>
+            <p class="text-xs text-[#553b28] font-telugu mt-0.5">
+              దయచేసి మీ రాకను మాకు ముందుగా తెలియజేయండి
+            </p>
+          </div>
+
+          <form onsubmit="handleRSVP(event)" class="space-y-3 font-telugu">
+            <div>
+              <label for="rsvpName" class="block text-xs font-semibold text-[#442c1d] mb-1">
+                మీ పూర్తి పేరు:
+              </label>
+              <input 
+                type="text" 
+                id="rsvpName" 
+                required 
+                placeholder="మీ పేరును ఇక్కడ నమోదు చేయండి" 
+                class="w-full px-3 py-2 rounded-xl border border-gold/50 bg-cream text-xs text-[#332211] focus:outline-none focus:border-maroon shadow-inner"
+              />
+            </div>
+
+            <div>
+              <label for="rsvpCount" class="block text-xs font-semibold text-[#442c1d] mb-1">
+                హాజరయ్యే వారి సంఖ్య:
+              </label>
+              <select 
+                id="rsvpCount" 
+                class="w-full px-3 py-2 rounded-xl border border-gold/50 bg-cream text-xs text-[#332211] focus:outline-none focus:border-maroon shadow-inner">
+                <option value="1">1 వ్యక్తి (నేను మాత్రమే)</option>
+                <option value="2" selected>2 వ్యక్తులు (దంపతులు)</option>
+                <option value="3">3 వ్యక్తులు</option>
+                <option value="4">4 వ్యక్తులు (కుటుంబం)</option>
+                <option value="5">5 వ్యక్తులు (కుటుంబం)</option>
+                <option value="6">6 వ్యక్తులు</option>
+                <option value="7">7 వ్యక్తులు</option>
+                <option value="8">8 వ్యక్తులు</option>
+                <option value="9">9 వ్యక్తులు</option>
+                <option value="10">10+ వ్యక్తులు (సకుటుంబంగా)</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="rsvpMessage" class="block text-xs font-semibold text-[#442c1d] mb-1">
+                వధూవరులకు మీ శుభాకాంక్షలు (ఐచ్ఛికం):
+              </label>
+              <textarea 
+                id="rsvpMessage" 
+                rows="2" 
+                placeholder="మీ ఆశీస్సులు మరియు శుభాకాంక్షలను ఇక్కడ రాయండి..." 
+                class="w-full px-3 py-2 rounded-xl border border-gold/50 bg-cream text-xs text-[#332211] focus:outline-none focus:border-maroon shadow-inner resize-none"></textarea>
+            </div>
+
+            <button 
+              type="submit" 
+              class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white text-xs font-bold shadow-md hover:brightness-110 transition-all flex items-center justify-center gap-2">
+              <span class="text-base">💬</span>
+              <span>వాట్సాప్ ద్వారా తెలియజేయండి</span>
+            </button>
+          </form>
+
+          <p class="text-[11px] text-center text-[#775533] mt-2 font-telugu">
+            సంప్రదించవలసిన ఫోన్ నంబర్: +91 81225 43467
+          </p>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           9. VIRAL LEAD-GEN FOOTER (Creator Credit)
+           ========================================== -->
+      <footer class="px-4 py-4 mt-2">
+        <div class="rounded-2xl p-4 bg-gradient-to-r from-maroon-dark to-maroon text-center text-white border border-gold/40 shadow-xl">
+          <p class="text-xs font-bold text-gold-shimmer font-telugu">
+            మీ వివాహానికి కూడా ఇలాంటి డిజిటల్ ఆహ్వాన వెబ్‌సైట్ కావాలా?
+          </p>
+          <p class="text-[11px] text-cream/80 font-telugu mt-1 leading-relaxed">
+            ఆకర్షణీయమైన గేట్ ఎఫెక్ట్స్, ప్రాంతీయ భాషల మద్దతు, ప్రత్యక్ష రాక నిర్ధారణ మరియు గూగుల్ మ్యాప్స్‌తో కూడిన ప్రత్యేక వెబ్‌సైట్ కోసం సంప్రదించండి!
+          </p>
+          <a 
+            href="https://wa.me/918122543467?text=Hi%2C%20I%20loved%20the%20digital%20wedding%20invitation%20website.%20I%20would%20like%20to%20get%20one%20created%21" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="mt-3 inline-flex items-center justify-center gap-2 py-2 px-4 rounded-full bg-gradient-to-r from-amber to-gold text-maroon font-bold text-xs shadow-md hover:brightness-110 transition-all font-telugu">
+            <span>💬 వాట్సాప్‌లో సంప్రదించండి</span>
+          </a>
+          <p class="text-[10px] text-gold/60 mt-2 font-poppins">
+            వి.పి. సాయి దినేష్ & ఆర్. జానకి దంపతుల కొరకు భక్తిశ్రద్ధలతో రూపొందించబడింది
+          </p>
+        </div>
+      </footer>
+
+      <!-- ==========================================
+           10. STICKY BOTTOM MOBILE NAVIGATION BAR
+           ========================================== -->
+      <nav class="fixed bottom-0 left-0 right-0 z-40 flex justify-center pointer-events-none">
+        <div class="w-full max-w-[440px] bg-cream-card/95 backdrop-blur-md border-t-2 border-gold/40 shadow-2xl py-2 px-3 flex justify-around items-center pointer-events-auto">
+          <a href="#blessings" class="flex flex-col items-center text-maroon hover:text-rose transition group">
+            <span class="text-lg group-hover:scale-110 transition-transform">🕉️</span>
+            <span class="text-[10px] font-bold font-telugu mt-0.5">ఆశీస్సులు</span>
+          </a>
+          <a href="#events" class="flex flex-col items-center text-maroon hover:text-rose transition group">
+            <span class="text-lg group-hover:scale-110 transition-transform">📅</span>
+            <span class="text-[10px] font-bold font-telugu mt-0.5">కార్యక్రమాలు</span>
+          </a>
+          <a href="#map" class="flex flex-col items-center text-maroon hover:text-rose transition group">
+            <span class="text-lg group-hover:scale-110 transition-transform">📍</span>
+            <span class="text-[10px] font-bold font-telugu mt-0.5">మ్యాప్</span>
+          </a>
+          <a href="#rsvp" class="flex flex-col items-center text-maroon hover:text-rose transition group">
+            <span class="text-lg group-hover:scale-110 transition-transform">✍️</span>
+            <span class="text-[10px] font-bold font-telugu mt-0.5">రాక నిర్ధారణ</span>
+          </a>
+        </div>
+      </nav>
+
+    </main>
+  </div>
+
+  <!-- Modular JavaScript Engine -->
+  <script src="js/main.js"></script>
+</body>
+</html>
