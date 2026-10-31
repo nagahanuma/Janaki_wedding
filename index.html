@@ -1,59 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>Janaki weds Sai Dinesh 💍 | South Indian Wedding Invitation</title>
-
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Sai Dinesh weds Janaki 💍 | Wedding Invitation">
-  <meta property="og:description"
-    content="Join us for the auspicious wedding ceremony of Sai Dinesh & Janaki on November 15, 2026 at Sengundhar Samudhaya Thirumana Mandapam, Sholinghur. 🌸">
-  <meta property="og:image"
-    content="https://via.placeholder.com/1200x630/C0182A/D4AF37?text=Sai+Dinesh+%2B+Janaki+Wedding">
-  <meta property="og:url" content="https://nagahanuma.github.io/Janaki_wedding/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>V.P. Sai Dinesh &amp; R. Janaki Wedding Invitation 💍</title>
+  
+  <!-- WhatsApp & Social Media Preview Cards -->
+  <meta property="og:title" content="V.P. Sai Dinesh &amp; R. Janaki Wedding Invitation 💍">
+  <meta property="og:description" content="Nov 15 &amp; 16, 2026 • Sholinghur Sengunthar Mudaliyar Thirumana Mandapam. We cordially invite you to our wedding ceremony. 🌸">
+  <meta property="og:image" content="couple_cute.png">
   <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
 
+  <!-- Modular Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body class="antialiased selection:bg-gold selection:text-maroon">
 
-  <!-- Background Music Audio Tag -->
-  <!-- Add your audio file URL here -->
-  <audio id="bgAudio" loop preload="auto">
-    <!-- Traditional Nadaswaram / Mangala Vadhyam royalty-free track source -->
-    <source src="https://actions.google.com/sounds/v1/ambiences/temple_bell_and_chanting.ogg" type="audio/ogg">
-    <source
-      src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c800b46d.mp3?filename=indian-flute-meditation-109038.mp3"
-      type="audio/mpeg">
-  </audio>
-
-  <!-- Interactive Falling Petals Canvas -->
+  <!-- Falling Flower Petals Canvas -->
   <canvas id="petalCanvas"></canvas>
 
-  <!-- WELCOME GATE OVERLAY (Doors that open on click) -->
+  <!-- Auspicious Background Music Player -->
+  <audio id="bgAudio" loop preload="none">
+    <source src="audio/nadaswaram.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ==========================================
+       WELCOME GATE OVERLAY (Grand Temple Doors)
+       ========================================== -->
   <div id="welcomeGate" class="fixed inset-0 z-50 overflow-hidden flex transition-opacity duration-1000">
     <!-- Left Door Panel -->
-    <div
-      class="door-left w-1/2 h-full bg-gradient-to-br from-[#4D0613] via-[#780D21] to-[#3B030E] border-r-2 border-[#D4AF37] relative flex flex-col justify-between p-4 shadow-2xl">
+    <div class="door-left w-1/2 h-full bg-gradient-to-br from-[#4D0613] via-[#780D21] to-[#3B030E] border-r-2 border-[#D4AF37] relative flex flex-col justify-between p-4 shadow-2xl">
       <!-- Ornate Gold Arch & Motifs on Left Door -->
-      <div
-        class="absolute inset-2 border border-gold/40 rounded-l-lg pointer-events-none flex flex-col justify-between p-3">
+      <div class="absolute inset-2 border border-gold/40 rounded-l-lg pointer-events-none flex flex-col justify-between p-3">
         <div class="flex justify-between items-start">
           <svg class="w-8 h-8 text-gold opacity-75" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2L15 8H9L12 2Z M2 12L8 9V15L2 12Z M12 22L9 16H15L12 22Z" />
@@ -62,16 +51,13 @@
         </div>
         <!-- Door stud decorations -->
         <div class="space-y-8 pl-2">
-          <div
-            class="w-5 h-5 rounded-full border-2 border-gold bg-[#29030A] shadow-inner flex items-center justify-center">
+          <div class="w-5 h-5 rounded-full border-2 border-gold bg-[#29030A] shadow-inner flex items-center justify-center">
             <div class="w-1.5 h-1.5 rounded-full bg-gold"></div>
           </div>
-          <div
-            class="w-5 h-5 rounded-full border-2 border-gold bg-[#29030A] shadow-inner flex items-center justify-center">
+          <div class="w-5 h-5 rounded-full border-2 border-gold bg-[#29030A] shadow-inner flex items-center justify-center">
             <div class="w-1.5 h-1.5 rounded-full bg-gold"></div>
           </div>
-          <div
-            class="w-5 h-5 rounded-full border-2 border-gold bg-[#29030A] shadow-inner flex items-center justify-center">
+          <div class="w-5 h-5 rounded-full border-2 border-gold bg-[#29030A] shadow-inner flex items-center justify-center">
             <div class="w-1.5 h-1.5 rounded-full bg-gold"></div>
           </div>
         </div>
@@ -81,18 +67,15 @@
       <div class="absolute top-12 right-4 flex flex-col items-center">
         <div class="w-0.5 h-10 bg-gold"></div>
         <svg class="w-7 h-7 text-gold drop-shadow" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M12 2a2 2 0 0 0-2 2v1.08C7.05 5.56 5 8.03 5 11v5l-2 2v1h18v-1l-2-2v-5c0-2.97-2.05-5.44-5-5.92V4a2 2 0 0 0-2-2zm0 20a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2z" />
+          <path d="M12 2a2 2 0 0 0-2 2v1.08C7.05 5.56 5 8.03 5 11v5l-2 2v1h18v-1l-2-2v-5c0-2.97-2.05-5.44-5-5.92V4a2 2 0 0 0-2-2zm0 20a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2z" />
         </svg>
       </div>
     </div>
 
     <!-- Right Door Panel -->
-    <div
-      class="door-right w-1/2 h-full bg-gradient-to-bl from-[#4D0613] via-[#780D21] to-[#3B030E] border-l-2 border-[#D4AF37] relative flex flex-col justify-between p-4 shadow-2xl">
+    <div class="door-right w-1/2 h-full bg-gradient-to-bl from-[#4D0613] via-[#780D21] to-[#3B030E] border-l-2 border-[#D4AF37] relative flex flex-col justify-between p-4 shadow-2xl">
       <!-- Ornate Gold Arch & Motifs on Right Door -->
-      <div
-        class="absolute inset-2 border border-gold/40 rounded-r-lg pointer-events-none flex flex-col justify-between p-3">
+      <div class="absolute inset-2 border border-gold/40 rounded-r-lg pointer-events-none flex flex-col justify-between p-3">
         <div class="flex justify-between items-start">
           <div class="w-3 h-3 rounded-full bg-gold shadow-md"></div>
           <svg class="w-8 h-8 text-gold opacity-75" viewBox="0 0 24 24" fill="currentColor">
@@ -101,16 +84,13 @@
         </div>
         <!-- Door stud decorations -->
         <div class="space-y-8 pr-2 flex flex-col items-end">
-          <div
-            class="w-5 h-5 rounded-full border-2 border-gold bg-[#29030A] shadow-inner flex items-center justify-center">
+          <div class="w-5 h-5 rounded-full border-2 border-gold bg-[#29030A] shadow-inner flex items-center justify-center">
             <div class="w-1.5 h-1.5 rounded-full bg-gold"></div>
           </div>
-          <div
-            class="w-5 h-5 rounded-full border-2 border-gold bg-[#29030A] shadow-inner flex items-center justify-center">
+          <div class="w-5 h-5 rounded-full border-2 border-gold bg-[#29030A] shadow-inner flex items-center justify-center">
             <div class="w-1.5 h-1.5 rounded-full bg-gold"></div>
           </div>
-          <div
-            class="w-5 h-5 rounded-full border-2 border-gold bg-[#29030A] shadow-inner flex items-center justify-center">
+          <div class="w-5 h-5 rounded-full border-2 border-gold bg-[#29030A] shadow-inner flex items-center justify-center">
             <div class="w-1.5 h-1.5 rounded-full bg-gold"></div>
           </div>
         </div>
@@ -120,25 +100,20 @@
       <div class="absolute top-12 left-4 flex flex-col items-center">
         <div class="w-0.5 h-10 bg-gold"></div>
         <svg class="w-7 h-7 text-gold drop-shadow" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M12 2a2 2 0 0 0-2 2v1.08C7.05 5.56 5 8.03 5 11v5l-2 2v1h18v-1l-2-2v-5c0-2.97-2.05-5.44-5-5.92V4a2 2 0 0 0-2-2zm0 20a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2z" />
+          <path d="M12 2a2 2 0 0 0-2 2v1.08C7.05 5.56 5 8.03 5 11v5l-2 2v1h18v-1l-2-2v-5c0-2.97-2.05-5.44-5-5.92V4a2 2 0 0 0-2-2zm0 20a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2z" />
         </svg>
       </div>
     </div>
 
     <!-- Center Floating Medallion with Open Invitation CTA -->
-    <div
-      class="gate-center-content absolute inset-0 z-20 flex flex-col items-center justify-center px-4 pointer-events-none">
-      <div
-        class="pointer-events-auto bg-[#260309]/95 border-2 border-gold p-6 sm:p-8 rounded-3xl shadow-[0_25px_60px_rgba(0,0,0,0.65)] text-center max-w-sm w-full mx-auto relative backdrop-blur-xl">
+    <div class="gate-center-content absolute inset-0 z-20 flex flex-col items-center justify-center px-4 pointer-events-none">
+      <div class="pointer-events-auto bg-[#260309]/95 border-2 border-gold p-6 sm:p-8 rounded-3xl shadow-[0_25px_60px_rgba(0,0,0,0.65)] text-center max-w-sm w-full mx-auto relative backdrop-blur-xl">
         <!-- Floating Om/Ganesh emblem -->
-        <div
-          class="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br from-[#9E1329] to-[#540613] border-2 border-gold flex items-center justify-center shadow-lg">
+        <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br from-[#9E1329] to-[#540613] border-2 border-gold flex items-center justify-center shadow-lg">
           <span class="text-3xl text-gold select-none">🕉</span>
         </div>
 
-        <p class="text-gold-light text-xs uppercase tracking-widest font-semibold mb-1">Auspicious Wedding Invitation
-        </p>
+        <p class="text-gold-light text-xs uppercase tracking-widest font-semibold mb-1">Auspicious Wedding Invitation</p>
 
         <!-- Couple Initials -->
         <h1 class="text-5xl sm:text-6xl font-playfair font-bold text-gold-gradient my-2 tracking-wide drop-shadow-md">
@@ -150,26 +125,21 @@
         <!-- Language Selector Row on Gate -->
         <div class="mb-6">
           <p class="text-gold-light/80 text-xs mb-2">Select Language / மொழியை தேர்ந்தெடுக்கவும்:</p>
-          <div
-            class="inline-flex rounded-full bg-gradient-to-r from-[#4A0612] to-[#2B030A] p-1 border border-gold/40 shadow-inner">
-            <button onclick="setLanguage('en')" id="gate-btn-en"
-              class="lang-gate-btn px-3 py-1 rounded-full text-xs font-semibold transition-all bg-gold text-maroon">
+          <div class="inline-flex rounded-full bg-gradient-to-r from-[#4A0612] to-[#2B030A] p-1 border border-gold/40 shadow-inner">
+            <a href="index.html" class="px-3 py-1 rounded-full text-xs font-semibold bg-gold text-maroon shadow-md">
               English
-            </button>
-            <button onclick="setLanguage('ta')" id="gate-btn-ta"
-              class="lang-gate-btn px-3 py-1 rounded-full text-xs font-semibold transition-all text-gold hover:text-white">
+            </a>
+            <a href="tamil.html" class="px-3 py-1 rounded-full text-xs font-semibold text-gold hover:text-white transition">
               தமிழ்
-            </button>
-            <button onclick="setLanguage('te')" id="gate-btn-te"
-              class="lang-gate-btn px-3 py-1 rounded-full text-xs font-semibold transition-all text-gold hover:text-white">
+            </a>
+            <a href="telugu.html" class="px-3 py-1 rounded-full text-xs font-semibold text-gold hover:text-white transition">
               తెలుగు
-            </button>
+            </a>
           </div>
         </div>
 
         <!-- Open Invitation Button -->
-        <button id="openGateBtn" onclick="openInvitationGate()"
-          class="w-full group relative inline-flex items-center justify-center px-6 py-3.5 text-base font-bold text-maroon rounded-full bg-gradient-to-r from-[#FFE58F] via-[#D4AF37] to-[#B38716] shadow-xl hover:shadow-gold/40 transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300">
+        <button onclick="openGate()" class="w-full group relative inline-flex items-center justify-center px-6 py-3.5 text-base font-bold text-maroon rounded-full bg-gradient-to-r from-[#FFE58F] via-[#D4AF37] to-[#B38716] shadow-xl hover:shadow-gold/40 transform hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300">
           <span class="mr-2 text-xl">🌸</span>
           <span class="tracking-wide">Open Invitation</span>
           <span class="ml-2 text-xl">🌸</span>
@@ -180,64 +150,51 @@
     </div>
   </div>
 
-  <!-- MAIN APP CONTAINER (Centered Mobile Shell on Desktop) -->
+  <!-- ==========================================
+       MAIN APP CONTAINER (Centered Mobile Shell)
+       ========================================== -->
   <div id="app" class="relative">
 
-    <!-- FLOATING LANGUAGE & AUDIO CONTROLS (Top Bar inside App) -->
-    <header
-      class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-gold/30 shadow-[0_4px_20px_rgba(0,0,0,0.04)] px-3 py-2 flex items-center justify-between text-cream shadow-md">
-      <!-- Left: Logo / Tag -->
+    <!-- FLOATING TOP BAR -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-gold/30 px-3 py-2 flex items-center justify-between text-maroon shadow-md">
+      <!-- Left: Monogram Tag -->
       <div class="flex items-center space-x-1.5">
         <span class="text-gold text-lg">🪔</span>
-        <span class="text-xs font-playfair font-bold text-gold tracking-wider uppercase">J &amp; A Wedding</span>
+        <span class="text-xs font-playfair font-bold text-maroon tracking-wider uppercase">Sai Dinesh &amp; Janaki</span>
       </div>
 
       <!-- Right: Language Pills & Music -->
       <div class="flex items-center space-x-2">
-        <!-- Compact Language Switcher -->
-        <div
-          class="flex bg-gradient-to-r from-[#590715] to-[#36030B] rounded-full p-0.5 border border-gold/40 text-[11px] shadow-inner">
-          <button onclick="setLanguage('en')" id="nav-btn-en"
-            class="px-2 py-0.5 rounded-full font-medium transition-all bg-gold text-maroon font-bold">EN</button>
-          <button onclick="setLanguage('ta')" id="nav-btn-ta"
-            class="px-2 py-0.5 rounded-full font-medium transition-all text-gold-light hover:text-white">தமிழ்</button>
-          <button onclick="setLanguage('te')" id="nav-btn-te"
-            class="px-2 py-0.5 rounded-full font-medium transition-all text-gold-light hover:text-white">తెలుగు</button>
+        <div class="flex bg-gradient-to-r from-[#590715] to-[#36030B] rounded-full p-0.5 border border-gold/40 text-[11px] shadow-inner">
+          <a href="index.html" class="px-2 py-0.5 rounded-full font-bold bg-gold text-maroon">EN</a>
+          <a href="tamil.html" class="px-2 py-0.5 rounded-full font-medium text-gold-light hover:text-white transition">தமிழ்</a>
+          <a href="telugu.html" class="px-2 py-0.5 rounded-full font-medium text-gold-light hover:text-white transition">తెలుగు</a>
         </div>
 
         <!-- Mini Audio Toggle -->
-        <button id="audioToggleBtnTop" onclick="toggleAudio()"
-          class="w-8 h-8 rounded-full bg-gradient-to-br from-[#7D0E21] to-[#450410] border border-gold/50 shadow-sm flex items-center justify-center text-gold text-xs shadow-sm hover:scale-105 transition-transform"
-          title="Toggle Music">
+        <button id="audioToggleBtnTop" onclick="toggleAudio()" class="w-8 h-8 rounded-full bg-gradient-to-br from-[#7D0E21] to-[#450410] border border-gold/50 shadow-sm flex items-center justify-center text-gold text-xs hover:scale-105 transition-transform" title="Toggle Music">
           <span id="audioIconTop">🔇</span>
         </button>
       </div>
     </header>
 
     <!-- SECTION 1: DIVINE BLESSINGS HEADER (Lord Ganesha & Shloka) -->
-    <section id="blessings"
-      class="relative bg-gradient-to-b from-[#4A0612] via-[#750E22] to-[#9E1329] text-cream pt-8 pb-10 px-4 text-center overflow-hidden">
-      <!-- Decorative South Indian Kolam Mandala SVG in Background -->
+    <section id="blessings" class="relative bg-gradient-to-b from-[#4A0612] via-[#750E22] to-[#9E1329] text-cream pt-8 pb-10 px-4 text-center overflow-hidden">
+      <!-- Background Kolam Mandala -->
       <div class="absolute inset-0 opacity-10 pointer-events-none flex items-center justify-center">
         <svg class="w-96 h-96 text-gold animate-spin-slow" viewBox="0 0 200 200" fill="currentColor">
-          <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="1.5"
-            stroke-dasharray="4,4" />
+          <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4,4" />
           <circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width="1" />
-          <path
-            d="M100 10 L105 40 L100 35 L95 40 Z M100 190 L105 160 L100 165 L95 160 Z M10 100 L40 105 L35 100 L40 95 Z M190 100 L160 105 L165 100 L160 95 Z M36 36 L60 55 L54 54 L55 60 Z M164 164 L140 145 L146 146 L145 140 Z M36 164 L55 140 L54 146 L60 145 Z M164 36 L145 60 L146 54 L140 55 Z" />
         </svg>
       </div>
 
-      <!-- Mango Leaves Toran Header -->
+      <!-- Mango Leaves Toran -->
       <div class="toran-garland w-full mb-4"></div>
 
       <!-- Glowing Rotating Halo with Ganesha -->
       <div class="relative w-36 h-36 mx-auto mb-4 flex items-center justify-center">
-        <!-- Rotating SVG Sunburst Halo -->
-        <svg class="absolute inset-0 w-full h-full text-gold opacity-80 animate-spin-slow ganesha-halo-glow"
-          viewBox="0 0 100 100" fill="currentColor">
+        <svg class="absolute inset-0 w-full h-full text-gold opacity-80 animate-spin-slow ganesha-halo-glow" viewBox="0 0 100 100" fill="currentColor">
           <g transform="translate(50,50)">
-            <!-- 16 Sunburst rays -->
             <path d="M0,-46 L3,-32 L-3,-32 Z" />
             <path d="M0,-46 L3,-32 L-3,-32 Z" transform="rotate(22.5)" />
             <path d="M0,-46 L3,-32 L-3,-32 Z" transform="rotate(45)" />
@@ -255,53 +212,26 @@
             <path d="M0,-46 L3,-32 L-3,-32 Z" transform="rotate(315)" />
             <path d="M0,-46 L3,-32 L-3,-32 Z" transform="rotate(337.5)" />
             <circle cx="0" cy="0" r="30" fill="none" stroke="currentColor" stroke-width="1.5" />
-            <circle cx="0" cy="0" r="34" fill="none" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2,2" />
           </g>
         </svg>
 
-        <!-- Golden Lord Ganesha Detailed Icon -->
-        <div
-          class="relative z-10 w-24 h-24 rounded-full bg-gradient-to-br from-[#7D0E21] to-[#38040C] border-2 border-gold shadow-[0_0_20px_rgba(212,175,55,0.45)] flex items-center justify-center shadow-xl p-2">
-          <svg class="w-20 h-20 text-gold filter drop-shadow" viewBox="0 0 100 100" fill="currentColor">
-            <!-- Crown / Kireetam -->
-            <path d="M46 12 L54 12 L57 24 L43 24 Z" fill="#FFE58F" />
-            <path d="M48 6 L52 6 L53 12 L47 12 Z" fill="#D4AF37" />
-            <circle cx="50" cy="5" r="2" fill="#FFE58F" />
-            <!-- Tilak / Trishul mark -->
-            <path d="M50 28 L51 36 L49 36 Z" fill="#E8A000" />
-            <circle cx="50" cy="38" r="1.5" fill="#C53030" />
-            <!-- Ganesha Head & Trunk Contour -->
-            <path
-              d="M38 32 C34 32 26 36 24 45 C22 54 28 58 34 56 C33 60 35 65 39 67 C36 71 34 77 34 81 C34 85 40 88 47 88 C43 85 41 81 42 77 C43 72 47 68 51 68 C56 68 58 72 60 76 C62 80 65 82 70 82 C74 82 76 79 74 76 C70 71 67 66 67 61 C72 61 77 56 77 48 C77 38 70 32 62 32 C58 28 42 28 38 32 Z"
-              fill="#D4AF37" />
-            <!-- Trunk Details & Modak in Hand -->
-            <path d="M47 50 C47 56 50 63 56 63 C60 63 62 60 62 57 C62 53 58 52 54 52" stroke="#9E1329" stroke-width="2"
-              fill="none" stroke-linecap="round" />
-            <!-- Tusk (Danta) -->
-            <path d="M42 54 L38 56 L42 57 Z" fill="#FFFDF7" />
-            <!-- Big Ears and Details -->
-            <path d="M28 40 C32 40 35 44 35 48 C35 52 30 54 27 50 Z" fill="#F5E6A3" opacity="0.6" />
-            <path d="M72 40 C68 40 65 44 65 48 C65 52 70 54 73 50 Z" fill="#F5E6A3" opacity="0.6" />
-            <!-- Eyes -->
-            <circle cx="43" cy="40" r="1.5" fill="#6E0A1B" />
-            <circle cx="57" cy="40" r="1.5" fill="#6E0A1B" />
-            <!-- Modak / Laddu held by trunk tip -->
-            <ellipse cx="62" cy="56" rx="3.5" ry="3" fill="#FFE58F" />
-            <!-- Abhaya Mudra / Blessing Palm on Right -->
-            <circle cx="68" cy="65" r="6" fill="#D4AF37" />
-            <circle cx="68" cy="65" r="2.5" fill="#C53030" />
-          </svg>
+        <!-- Golden Lord Ganesha Icon -->
+        <div class="relative z-10 w-24 h-24 rounded-full bg-gradient-to-br from-[#7D0E21] to-[#38040C] border-2 border-gold shadow-[0_0_20px_rgba(212,175,55,0.45)] flex items-center justify-center p-2">
+          <span class="text-4xl text-gold filter drop-shadow">🕉️</span>
         </div>
       </div>
 
       <!-- Sacred Shloka -->
-      <p
-        class="font-playfair text-gold text-sm sm:text-base tracking-wider font-semibold drop-shadow mb-1">
-        🕉 Sri Madh Virat Viswa Brahmane Namaha • Shubham Bhavatu Kalyanam 🕉
+      <p class="font-playfair text-gold text-sm sm:text-base tracking-wider font-semibold drop-shadow mb-1">
+        || Sri Madh Virat Viswa Brahmane Namaha ||
       </p>
 
-      <p class="text-xs uppercase tracking-widest text-gold-light/80">
-        Divine Blessings of Almighty
+      <h1 class="font-playfair text-2xl font-extrabold text-gold-bright tracking-wide mt-1">
+        Wedding Invitation
+      </h1>
+
+      <p class="text-xs uppercase tracking-widest text-gold-light/80 mt-1">
+        We cordially invite you for our wedding ceremony
       </p>
 
       <div class="kolam-divider max-w-xs mx-auto">
@@ -311,103 +241,55 @@
 
     <!-- SECTION 2: CARTOON COUPLE HERO & NAMES -->
     <section class="relative px-4 -mt-4 z-10">
-      <div
-        class="bg-white/95 backdrop-blur-xl rounded-3xl p-5 sm:p-6 shadow-[0_15px_40px_rgba(158,19,41,0.08)] border-2 border-amber-200/80 text-center relative overflow-hidden">
+      <div class="bg-white/95 backdrop-blur-xl rounded-3xl p-5 sm:p-6 shadow-[0_15px_40px_rgba(158,19,41,0.08)] border-2 border-amber-200/80 text-center relative overflow-hidden">
 
-        <!-- Marigold Garland Top Decoration (matching physical invitation) -->
+        <!-- Marigold Garland Top Decoration -->
         <div class="flex justify-center items-center gap-0 -mx-5 -mt-5 mb-3 overflow-hidden">
-          <svg viewBox="0 0 320 40" class="w-full" xmlns="http://www.w3.org/2000/svg">
-            <!-- String -->
-            <path d="M0 10 Q40 18 80 10 Q120 2 160 10 Q200 18 240 10 Q280 2 320 10" stroke="#8B6914" stroke-width="1.5"
-              fill="none" />
-            <!-- Marigold flowers along string -->
-            <circle cx="20" cy="11" r="7" fill="#E8890A" />
-            <circle cx="20" cy="11" r="3.5" fill="#FFD700" />
-            <circle cx="50" cy="16" r="7" fill="#F5A623" />
-            <circle cx="50" cy="16" r="3.5" fill="#FFD700" />
-            <circle cx="80" cy="10" r="7" fill="#E8890A" />
-            <circle cx="80" cy="10" r="3.5" fill="#FFD700" />
-            <circle cx="110" cy="5" r="7" fill="#F5A623" />
-            <circle cx="110" cy="5" r="3.5" fill="#FFD700" />
-            <circle cx="140" cy="11" r="7" fill="#E8890A" />
-            <circle cx="140" cy="11" r="3.5" fill="#FFD700" />
-            <circle cx="160" cy="10" r="8" fill="#FF8C00" />
-            <circle cx="160" cy="10" r="4" fill="#FFD700" />
-            <circle cx="180" cy="11" r="7" fill="#E8890A" />
-            <circle cx="180" cy="11" r="3.5" fill="#FFD700" />
-            <circle cx="210" cy="5" r="7" fill="#F5A623" />
-            <circle cx="210" cy="5" r="3.5" fill="#FFD700" />
-            <circle cx="240" cy="10" r="7" fill="#E8890A" />
-            <circle cx="240" cy="10" r="3.5" fill="#FFD700" />
-            <circle cx="270" cy="16" r="7" fill="#F5A623" />
-            <circle cx="270" cy="16" r="3.5" fill="#FFD700" />
-            <circle cx="300" cy="11" r="7" fill="#E8890A" />
-            <circle cx="300" cy="11" r="3.5" fill="#FFD700" />
-            <!-- Green leaves between flowers -->
-            <path d="M33 10 Q38 4 43 10" fill="#2E7D32" opacity="0.8" />
-            <path d="M63 14 Q68 8 73 14" fill="#2E7D32" opacity="0.8" />
-            <path d="M93 9 Q98 3 103 9" fill="#2E7D32" opacity="0.8" />
-            <path d="M123 7 Q128 1 133 7" fill="#2E7D32" opacity="0.8" />
-            <path d="M193 10 Q198 4 203 10" fill="#2E7D32" opacity="0.8" />
-            <path d="M223 7 Q228 1 233 7" fill="#2E7D32" opacity="0.8" />
-            <path d="M253 14 Q258 8 263 14" fill="#2E7D32" opacity="0.8" />
-            <path d="M283 10 Q288 4 293 10" fill="#2E7D32" opacity="0.8" />
+          <svg viewBox="0 0 320 30" class="w-full" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 8 Q40 16 80 8 Q120 0 160 8 Q200 16 240 8 Q280 0 320 8" stroke="#8B6914" stroke-width="1.5" fill="none" />
+            <circle cx="20" cy="9" r="6" fill="#E8890A" />
+            <circle cx="60" cy="12" r="6" fill="#F5A623" />
+            <circle cx="100" cy="6" r="6" fill="#E8890A" />
+            <circle cx="140" cy="9" r="6" fill="#F5A623" />
+            <circle cx="180" cy="9" r="6" fill="#E8890A" />
+            <circle cx="220" cy="6" r="6" fill="#F5A623" />
+            <circle cx="260" cy="12" r="6" fill="#E8890A" />
+            <circle cx="300" cy="9" r="6" fill="#F5A623" />
           </svg>
         </div>
-        <div class="text-center mb-3">
-          <span class="text-maroon font-bold text-xs uppercase tracking-widest">Subha
-            Muhurtham</span>
+
+        <div class="text-center mb-2">
+          <span class="text-maroon font-bold text-xs uppercase tracking-widest">Subha Muhurtham</span>
         </div>
 
-        <!-- Arch Frame Container with South Indian Couple Illustration (Real Cute Invitation Art) -->
+        <!-- Arch Frame Container with South Indian Couple Illustration -->
         <div class="relative mx-auto max-w-[340px] sm:max-w-[380px] p-2">
           <!-- Warm Festive Golden Aura Glow -->
-          <div
-            class="absolute inset-0 bg-gradient-to-b from-gold/25 via-turmeric/20 to-transparent blur-2xl rounded-t-full pointer-events-none transform -translate-y-2">
-          </div>
+          <div class="absolute inset-0 bg-gradient-to-b from-gold/25 via-turmeric/20 to-transparent blur-2xl rounded-t-full pointer-events-none transform -translate-y-2"></div>
 
           <!-- Ornate Temple Mandapam Frame -->
-          <div
-            class="relative rounded-t-full rounded-b-3xl border-4 border-gold shadow-2xl bg-gradient-to-b from-[#FFFDF7] via-[#FFF9EE] to-[#FDF4E2] overflow-hidden p-2 group transition-all duration-500 hover:shadow-gold/40">
+          <div class="relative rounded-t-full rounded-b-3xl border-4 border-gold shadow-2xl bg-gradient-to-b from-[#FFFDF7] via-[#FFF9EE] to-[#FDF4E2] overflow-hidden p-2 group transition-all duration-500 hover:shadow-gold/40">
 
-            <!-- Subtle Temple Arch SVG Silhouette -->
-            <div class="absolute inset-0 pointer-events-none opacity-25 z-10">
-              <svg class="w-full h-full" viewBox="0 0 100 120" preserveAspectRatio="none">
-                <line x1="6" y1="0" x2="6" y2="120" stroke="#9E1329" stroke-width="2.5" />
-                <line x1="94" y1="0" x2="94" y2="120" stroke="#9E1329" stroke-width="2.5" />
-                <path d="M6 35 Q50 8 94 35" stroke="#9E1329" stroke-width="2" fill="none" />
-                <circle cx="50" cy="18" r="8" fill="#D4AF37" />
-              </svg>
-            </div>
-
-            <!-- Hanging Auspicious Marigold & Mango Toran (Animated) -->
+            <!-- Hanging Auspicious Marigold & Mango Toran -->
             <div class="absolute top-2 inset-x-0 flex justify-around text-base z-20 pointer-events-none select-none">
-              <span class="animate-bounce text-lg" style="animation-duration: 3s">🥭</span>
-              <span class="animate-bounce text-lg" style="animation-duration: 2.7s">🌼</span>
-              <span class="animate-bounce text-lg" style="animation-duration: 3.2s">🥭</span>
-              <span class="animate-bounce text-lg" style="animation-duration: 2.9s">🌼</span>
-              <span class="animate-bounce text-lg" style="animation-duration: 3.1s">🥭</span>
+              <span class="text-sm">🥭</span>
+              <span class="text-sm">🌼</span>
+              <span class="text-sm">🥭</span>
+              <span class="text-sm">🌼</span>
+              <span class="text-sm">🥭</span>
             </div>
 
-            <!-- Exact Cute 3D Cartoon Couple from Original Wedding Invitation -->
-            <div
-              class="animate-float relative z-10 w-full flex justify-center items-end overflow-hidden rounded-t-full">
-              <img
-                src="couple_arched.webp" onerror="this.onerror=null;this.src='couple_arched.png';"
-                alt="V.P. Sai Dinesh and R. Janaki"
-                class="w-full h-auto object-cover object-bottom filter drop-shadow-md select-none pointer-events-none transition-transform duration-700 group-hover:scale-105"
-                width="600" height="520" />
+            <!-- Cute 3D Cartoon Couple from Original Wedding Invitation -->
+            <div class="animate-float relative z-10 w-full flex justify-center items-end overflow-hidden rounded-t-full">
+              <img src="couple_arched.webp" onerror="this.onerror=null;this.src='couple_arched.png';" alt="V.P. Sai Dinesh and R. Janaki" class="w-full h-auto object-cover object-bottom filter drop-shadow-md select-none pointer-events-none" width="600" height="520" />
             </div>
 
-            <!-- Bottom Gold Trim & Decorative Accent -->
             <div class="absolute bottom-0 inset-x-0 h-2 bg-gradient-to-r from-gold via-turmeric to-gold z-20"></div>
           </div>
         </div>
 
-        <!-- Couple Name Heading (Matching Official Invitation Typography) -->
+        <!-- Couple Names -->
         <div class="mt-4 space-y-1">
-          <p class="text-xs uppercase tracking-widest text-maroon/80 font-serif font-semibold">We cordially invite you
-            for our wedding ceremony</p>
           <h2 class="text-3xl sm:text-4xl font-playfair font-bold text-maroon tracking-wide">
             V.P. Sai Dinesh
           </h2>
@@ -415,120 +297,62 @@
           <h2 class="text-3xl sm:text-4xl font-playfair font-bold text-maroon tracking-wide">
             R. Janaki
           </h2>
-          <p class="text-gold font-semibold text-xs sm:text-sm pt-1">
-            Sai Dinesh &amp; Janaki Wedding Invitation
-          </p>
         </div>
 
         <div class="kolam-divider my-3">
           <span class="text-maroon text-xs">❦</span>
         </div>
 
-        <!-- Parents & Family Lineage -->
-        <div class="space-y-3 text-xs sm:text-sm text-gray-700 font-normal">
-          <!-- Bride Side -->
-          <div class="bg-cream-soft/70 rounded-xl p-2.5 border border-gold/30">
-            <span class="font-semibold text-maroon block mb-0.5 text-xs uppercase tracking-wider">Bride</span>
-            <p class="leading-relaxed">
-              Daughter of Sri. R. Subramaniam's family, Sholinghur
-            </p>
-          </div>
-
-          <!-- Groom Side -->
-          <div class="bg-cream-soft/70 rounded-xl p-2.5 border border-gold/30">
-            <span class="font-semibold text-maroon block mb-0.5 text-xs uppercase tracking-wider">Groom</span>
-            <p class="leading-relaxed">
-              Son of Sri. V.P.'s family, Sholinghur
-            </p>
-          </div>
-
-          <!-- Grandparents Blessing Card -->
-          <div class="pt-1">
-            <p class="text-maroon font-serif font-semibold text-xs tracking-wide">
-              With the loving blessings of our beloved Grandparents:
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 text-[11px] text-gray-600 mt-1 italic">
-              <div>With the blessings of our beloved elders</div>
-              <div>of both families</div>
-            </div>
-          </div>
-
-          <!-- Cordial Invitation Quote -->
-          <p class="text-xs text-maroon/90 font-serif italic pt-1 leading-relaxed px-2">
-            "Cordially invite you and your family to grace the auspicious wedding ceremony of our children and shower
-            your blessings on the couple."
-          </p>
-        </div>
+        <!-- Auspicious Invitation Quote -->
+        <p class="text-xs text-maroon/90 font-serif italic pt-1 leading-relaxed px-3 bg-cream-soft/80 py-2.5 rounded-xl border border-gold/30">
+          "Cordially invite you and your family to grace our auspicious wedding ceremony and shower your blessings on the couple."
+        </p>
 
       </div>
     </section>
 
     <!-- SECTION 3: LIVE COUNTDOWN TIMER -->
-    <section id="countdown" class="px-4 py-8 text-center">
-      <div
-        class="bg-gradient-to-br from-[#092B20] via-[#103D2E] to-[#420816] rounded-3xl p-6 border-2 border-gold/70 shadow-[0_20px_45px_rgba(9,43,32,0.35)] text-cream relative overflow-hidden">
-
-        <!-- Subtle corner ornaments -->
+    <section id="countdown" class="px-4 py-6 text-center">
+      <div class="bg-gradient-to-br from-[#092B20] via-[#103D2E] to-[#420816] rounded-3xl p-6 border-2 border-gold/70 shadow-[0_20px_45px_rgba(9,43,32,0.35)] text-cream relative overflow-hidden">
         <div class="absolute top-2 left-2 text-gold opacity-50 text-xs">🪷</div>
         <div class="absolute top-2 right-2 text-gold opacity-50 text-xs">🪷</div>
 
-        <h3
-          class="font-playfair text-gold text-base sm:text-lg font-bold mb-4 tracking-wide">
+        <h3 class="font-playfair text-gold text-base sm:text-lg font-bold mb-4 tracking-wide">
           Counting Down to the Auspicious Muhurtham
         </h3>
 
         <!-- Four Digit Boxes -->
         <div class="grid grid-cols-4 gap-2 max-w-sm mx-auto">
           <!-- Days Box -->
-          <div
-            class="bg-black/40 rounded-2xl p-2.5 sm:p-3 border border-gold/50 shadow-inner backdrop-blur-md digit-box"
-            id="box-days">
-            <span id="timer-days"
-              class="block font-playfair font-extrabold text-2xl sm:text-3xl text-gold-bright">00</span>
-            <span
-              class="text-[10px] sm:text-xs uppercase tracking-wider text-cream/70 font-medium">Days</span>
+          <div class="bg-black/40 rounded-2xl p-2.5 border border-gold/50 shadow-inner backdrop-blur-md digit-box" id="box-days">
+            <span id="timer-days" class="block font-playfair font-extrabold text-2xl text-gold-bright">00</span>
+            <span class="text-[10px] uppercase tracking-wider text-cream/70 font-medium">Days</span>
           </div>
-
           <!-- Hours Box -->
-          <div
-            class="bg-black/40 rounded-2xl p-2.5 sm:p-3 border border-gold/50 shadow-inner backdrop-blur-md digit-box"
-            id="box-hours">
-            <span id="timer-hours"
-              class="block font-playfair font-extrabold text-2xl sm:text-3xl text-gold-bright">00</span>
-            <span
-              class="text-[10px] sm:text-xs uppercase tracking-wider text-cream/70 font-medium">Hours</span>
+          <div class="bg-black/40 rounded-2xl p-2.5 border border-gold/50 shadow-inner backdrop-blur-md digit-box" id="box-hours">
+            <span id="timer-hours" class="block font-playfair font-extrabold text-2xl text-gold-bright">00</span>
+            <span class="text-[10px] uppercase tracking-wider text-cream/70 font-medium">Hours</span>
           </div>
-
           <!-- Minutes Box -->
-          <div
-            class="bg-black/40 rounded-2xl p-2.5 sm:p-3 border border-gold/50 shadow-inner backdrop-blur-md digit-box"
-            id="box-minutes">
-            <span id="timer-minutes"
-              class="block font-playfair font-extrabold text-2xl sm:text-3xl text-gold-bright">00</span>
-            <span
-              class="text-[10px] sm:text-xs uppercase tracking-wider text-cream/70 font-medium">Mins</span>
+          <div class="bg-black/40 rounded-2xl p-2.5 border border-gold/50 shadow-inner backdrop-blur-md digit-box" id="box-minutes">
+            <span id="timer-minutes" class="block font-playfair font-extrabold text-2xl text-gold-bright">00</span>
+            <span class="text-[10px] uppercase tracking-wider text-cream/70 font-medium">Mins</span>
           </div>
-
           <!-- Seconds Box -->
-          <div
-            class="bg-black/40 rounded-2xl p-2.5 sm:p-3 border border-gold/50 shadow-inner backdrop-blur-md digit-box"
-            id="box-seconds">
-            <span id="timer-seconds"
-              class="block font-playfair font-extrabold text-2xl sm:text-3xl text-gold-bright text-turmeric">00</span>
-            <span
-              class="text-[10px] sm:text-xs uppercase tracking-wider text-cream/70 font-medium">Secs</span>
+          <div class="bg-black/40 rounded-2xl p-2.5 border border-gold/50 shadow-inner backdrop-blur-md digit-box" id="box-seconds">
+            <span id="timer-seconds" class="block font-playfair font-extrabold text-2xl text-gold-bright text-turmeric">00</span>
+            <span class="text-[10px] uppercase tracking-wider text-cream/70 font-medium">Secs</span>
           </div>
         </div>
 
         <p class="text-[11px] text-gold-light/80 mt-3 font-serif italic">
-          Monday, November 16, 2026 • Muhurtham 5:00 AM
+          Monday, November 16, 2026 (16-11-2026) • Muhurtham 5:00 AM IST
         </p>
       </div>
     </section>
 
-    <!-- SECTION 4: AUSPICIOUS WEDDING EVENTS (Reception & Muhurtham) -->
-    <section id="events" class="px-4 py-4 space-y-6">
-
+    <!-- SECTION 4: AUSPICIOUS WEDDING EVENTS -->
+    <section id="events" class="px-4 py-2 space-y-5">
       <div class="text-center">
         <span class="text-xs uppercase tracking-widest text-maroon font-bold font-serif">Auspicious Occasions</span>
         <h2 class="text-2xl font-playfair font-bold text-maroon mt-1">Wedding Ceremonies</h2>
@@ -537,35 +361,27 @@
 
       <!-- CARD 1: RECEPTION & DINNER -->
       <div class="rounded-3xl border-2 border-gold/60 shadow-xl overflow-hidden bg-white">
-        <!-- Maroon Card Header -->
-        <div
-          class="bg-gradient-to-r from-[#600715] via-[#8E1129] to-[#B81938] p-4 text-cream flex items-center justify-between border-b border-gold/40">
+        <div class="bg-gradient-to-r from-[#600715] via-[#8E1129] to-[#B81938] p-4 text-cream flex items-center justify-between border-b border-gold/40">
           <div class="flex items-center space-x-3">
             <div class="w-10 h-10 rounded-full bg-gold/20 border border-gold flex items-center justify-center text-xl">
               ✨
             </div>
             <div>
-              <h3 class="font-playfair font-bold text-lg text-gold-bright leading-tight">
-                Reception &amp; Dinner
-              </h3>
+              <h3 class="font-playfair font-bold text-lg text-gold-bright leading-tight">Reception &amp; Dinner</h3>
               <p class="text-[11px] text-gold-light/70 uppercase tracking-wider">Musical Evening &amp; Grand Feast</p>
             </div>
           </div>
           <span class="text-xl text-gold">🪔</span>
         </div>
 
-        <!-- Cream Card Body -->
-        <div class="p-5 bg-gradient-to-b from-[#FFFDF7] to-[#FBF6E9] space-y-3.5 text-xs sm:text-sm text-gray-700">
-          <!-- Date -->
+        <div class="p-5 bg-gradient-to-b from-[#FFFDF7] to-[#FBF6E9] space-y-3 text-xs sm:text-sm text-gray-700">
           <div class="flex items-start space-x-3">
             <span class="text-lg text-turmeric mt-0.5">📅</span>
             <div>
               <span class="font-bold text-maroon block">Date</span>
-              <p class="font-medium">Sunday, November 15, 2026</p>
+              <p class="font-semibold text-gray-800">Sunday, November 15, 2026 (15-11-2026)</p>
             </div>
           </div>
-
-          <!-- Time -->
           <div class="flex items-start space-x-3">
             <span class="text-lg text-turmeric mt-0.5">⏰</span>
             <div>
@@ -573,29 +389,25 @@
               <p class="font-medium">7:00 PM onwards</p>
             </div>
           </div>
-
-          <!-- Venue -->
           <div class="flex items-start space-x-3">
             <span class="text-lg text-turmeric mt-0.5">🏛️</span>
             <div>
               <span class="font-bold text-maroon block">Venue</span>
-              <p class="font-medium">Sengundhar Samudhaya Thirumana Mandapam, Sholinghur</p>
+              <p class="font-semibold text-gray-800">Sholinghur Sengunthar Mudaliyar Thirumana Mandapam</p>
+              <p class="text-[11px] text-gray-500 mt-0.5">4C9C+C5G, Sengunther Othavadai St, Sholinghur, Tamil Nadu 631102</p>
             </div>
           </div>
+          <div class="bg-cream-soft border border-gold/30 p-2.5 rounded-xl flex items-center space-x-2 text-maroon text-xs">
+            <span>🍽️</span>
+            <p class="font-medium">Grand Dinner Feast: 7:30 PM onwards</p>
+          </div>
 
-          <!-- Action Buttons side-by-side -->
           <div class="grid grid-cols-2 gap-3 pt-3 border-t border-gold/30">
-            <!-- Navigate Button -->
-            <a href="https://maps.google.com/?q=Sengundhar+Samudhaya+Thirumana+Mandapam+Sholinghur" target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-cream border border-maroon text-maroon hover:bg-maroon hover:text-white transition-all text-xs font-semibold shadow-sm">
+            <a href="https://maps.google.com/?q=Sholinghur+Sengunthar+Mudaliyar+Thirumana+Mandapam,+4C9C%2BC5G,+Sengunther+Othavadai+St,+Sholinghur,+Tamil+Nadu+631102" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-cream border border-maroon text-maroon hover:bg-maroon hover:text-white transition-all text-xs font-semibold shadow-sm">
               <span class="mr-1.5 text-sm">📍</span>
-              <span>Navigate</span>
+              <span>Directions</span>
             </a>
-
-            <!-- Add to Calendar Button -->
-            <button onclick="addToCalendarReception()"
-              class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-maroon text-gold hover:bg-[#6E0A1B] transition-all text-xs font-semibold shadow-sm">
+            <button onclick="addToCalendarReception()" class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-maroon text-gold hover:bg-[#6E0A1B] transition-all text-xs font-semibold shadow-sm">
               <span class="mr-1.5 text-sm">📅</span>
               <span>Add to Calendar</span>
             </button>
@@ -603,36 +415,29 @@
         </div>
       </div>
 
-      <!-- CARD 1.5: UPANAYANAM -->
+      <!-- CARD 2: UPANAYANAM -->
       <div class="rounded-3xl border-2 border-amber-400/70 shadow-xl overflow-hidden bg-white">
-        <!-- Sacred Amber Saffron Card Header -->
-        <div
-          class="bg-gradient-to-r from-[#692803] via-[#943F07] to-[#BA550C] p-4 text-cream flex items-center justify-between border-b border-amber-300/40">
+        <div class="bg-gradient-to-r from-[#692803] via-[#943F07] to-[#BA550C] p-4 text-cream flex items-center justify-between border-b border-amber-300/40">
           <div class="flex items-center space-x-3">
-            <div
-              class="w-10 h-10 rounded-full bg-amber-400/25 border border-amber-300 flex items-center justify-center text-xl shadow-inner">
+            <div class="w-10 h-10 rounded-full bg-amber-400/25 border border-amber-300 flex items-center justify-center text-xl shadow-inner">
               🔥
             </div>
             <div>
-              <h3 class="font-playfair font-bold text-lg text-gold-bright leading-tight">
-                Upanayanam
-              </h3>
+              <h3 class="font-playfair font-bold text-lg text-gold-bright leading-tight">Upanayanam</h3>
               <p class="text-[11px] text-gold-light/70 uppercase tracking-wider">Sacred Thread Ceremony</p>
             </div>
           </div>
           <span class="text-xl text-gold">🕉</span>
         </div>
-        <!-- Cream Card Body -->
-        <div class="p-5 bg-gradient-to-b from-[#FFFDF7] to-[#FBF6E9] space-y-3.5 text-xs sm:text-sm text-gray-700">
-          <!-- Date -->
+
+        <div class="p-5 bg-gradient-to-b from-[#FFFDF7] to-[#FBF6E9] space-y-3 text-xs sm:text-sm text-gray-700">
           <div class="flex items-start space-x-3">
             <span class="text-lg text-turmeric mt-0.5">📅</span>
             <div>
               <span class="font-bold text-maroon block">Date</span>
-              <p class="font-medium">Monday, November 16, 2026</p>
+              <p class="font-semibold text-gray-800">Monday, November 16, 2026 (16-11-2026)</p>
             </div>
           </div>
-          <!-- Time -->
           <div class="flex items-start space-x-3">
             <span class="text-lg text-turmeric mt-0.5">⏰</span>
             <div>
@@ -640,24 +445,21 @@
               <p class="font-semibold text-maroon">4:00 AM – 5:00 AM</p>
             </div>
           </div>
-          <!-- Venue -->
           <div class="flex items-start space-x-3">
             <span class="text-lg text-turmeric mt-0.5">🏛️</span>
             <div>
               <span class="font-bold text-maroon block">Venue</span>
-              <p class="font-medium">Sengundhar Samudhaya Thirumana Mandapam, Sholinghur</p>
+              <p class="font-semibold text-gray-800">Sholinghur Sengunthar Mudaliyar Thirumana Mandapam</p>
+              <p class="text-[11px] text-gray-500 mt-0.5">4C9C+C5G, Sengunther Othavadai St, Sholinghur, Tamil Nadu 631102</p>
             </div>
           </div>
-          <!-- Action Buttons -->
+
           <div class="grid grid-cols-2 gap-3 pt-3 border-t border-gold/30">
-            <a href="https://maps.google.com/?q=Sengundhar+Samudhaya+Thirumana+Mandapam+Sholinghur" target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-cream border border-maroon text-maroon hover:bg-maroon hover:text-white transition-all text-xs font-semibold shadow-sm">
+            <a href="https://maps.google.com/?q=Sholinghur+Sengunthar+Mudaliyar+Thirumana+Mandapam,+4C9C%2BC5G,+Sengunther+Othavadai+St,+Sholinghur,+Tamil+Nadu+631102" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-cream border border-maroon text-maroon hover:bg-maroon hover:text-white transition-all text-xs font-semibold shadow-sm">
               <span class="mr-1.5 text-sm">📍</span>
-              <span>Navigate</span>
+              <span>Directions</span>
             </a>
-            <button onclick="addToCalendarUpanayanam()"
-              class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-maroon text-gold hover:bg-[#6E0A1B] transition-all text-xs font-semibold shadow-sm">
+            <button onclick="addToCalendarUpanayanam()" class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-maroon text-gold hover:bg-[#6E0A1B] transition-all text-xs font-semibold shadow-sm">
               <span class="mr-1.5 text-sm">📅</span>
               <span>Add to Calendar</span>
             </button>
@@ -665,94 +467,71 @@
         </div>
       </div>
 
-      <!-- CARD 2: MUHURTHAM (WEDDING CEREMONY) -->
+      <!-- CARD 3: MUHURTHAM -->
       <div class="rounded-3xl border-2 border-gold shadow-2xl overflow-hidden bg-white relative">
-        <!-- Golden Ribbon Badge -->
-        <div
-          class="absolute -right-12 top-6 bg-gradient-to-r from-turmeric to-gold text-maroon font-bold text-[10px] uppercase py-1 px-12 rotate-45 shadow-md">
+        <div class="absolute -right-12 top-6 bg-gradient-to-r from-turmeric to-gold text-maroon font-bold text-[10px] uppercase py-1 px-12 rotate-45 shadow-md">
           Auspicious
         </div>
 
-        <!-- Maroon Card Header -->
-        <div
-          class="bg-gradient-to-r from-[#052418] via-[#0C4735] to-[#146E52] p-4 text-cream flex items-center justify-between border-b border-emerald-300/40">
+        <div class="bg-gradient-to-r from-[#052418] via-[#0C4735] to-[#146E52] p-4 text-cream flex items-center justify-between border-b border-emerald-300/40">
           <div class="flex items-center space-x-3">
             <div class="w-10 h-10 rounded-full bg-gold/20 border border-gold flex items-center justify-center text-xl">
               💍
             </div>
             <div>
-              <h3 class="font-playfair font-bold text-lg text-gold-bright leading-tight">
-                Wedding Muhurtham
-              </h3>
+              <h3 class="font-playfair font-bold text-lg text-gold-bright leading-tight">Wedding Muhurtham</h3>
               <p class="text-[11px] text-gold-light/70 uppercase tracking-wider">Sacred Mangalya Dharanam</p>
             </div>
           </div>
           <span class="text-xl text-gold">🕉</span>
         </div>
 
-        <!-- Cream Card Body -->
-        <div class="p-5 bg-gradient-to-b from-[#FFFDF7] to-[#FBF6E9] space-y-3.5 text-xs sm:text-sm text-gray-700">
-          <!-- Date -->
+        <div class="p-5 bg-gradient-to-b from-[#FFFDF7] to-[#FBF6E9] space-y-3 text-xs sm:text-sm text-gray-700">
           <div class="flex items-start space-x-3">
             <span class="text-lg text-turmeric mt-0.5">📅</span>
             <div>
               <span class="font-bold text-maroon block">Date</span>
-              <p class="font-medium">Monday, November 16, 2026</p>
+              <p class="font-semibold text-gray-800">Monday, November 16, 2026 (16-11-2026)</p>
             </div>
           </div>
-
-          <!-- Lagnam Time -->
           <div class="flex items-start space-x-3">
             <span class="text-lg text-turmeric mt-0.5">⏰</span>
             <div>
-              <span class="font-bold text-maroon block">Muhurtham &amp; Subha Lagnam</span>
-              <p class="font-semibold text-maroon">
-                Upanayanam: 4:00 AM – 5:00 AM | Muhurtham: 5:00 AM – 6:00 AM
-              </p>
+              <span class="font-bold text-maroon block">Muhurtham Lagnam</span>
+              <p class="font-semibold text-rose-700">5:00 AM – 6:00 AM</p>
             </div>
           </div>
-
-          <!-- Venue -->
           <div class="flex items-start space-x-3">
             <span class="text-lg text-turmeric mt-0.5">🏛️</span>
             <div>
               <span class="font-bold text-maroon block">Venue</span>
-              <p class="font-medium">Sengundhar Samudhaya Thirumana Mandapam, Sholinghur</p>
+              <p class="font-semibold text-gray-800">Sholinghur Sengunthar Mudaliyar Thirumana Mandapam</p>
+              <p class="text-[11px] text-gray-500 mt-0.5">4C9C+C5G, Sengunther Othavadai St, Sholinghur, Tamil Nadu 631102</p>
             </div>
           </div>
-
-          <!-- Wedding Lunch Notice -->
           <div class="bg-emerald-900/10 border-l-4 border-[#0C4735] p-3 rounded-r-xl shadow-sm">
             <div class="flex items-center space-x-2 text-maroon font-semibold text-xs">
               <span>🍌</span>
-              <p>Traditional Wedding Feast: After Muhurtham (6:00 AM onwards)</p>
+              <p>Traditional Kalyana Virundhu: 7:30 AM onwards</p>
             </div>
           </div>
 
-          <!-- Action Buttons side-by-side -->
           <div class="grid grid-cols-2 gap-3 pt-3 border-t border-gold/30">
-            <!-- Navigate Button -->
-            <a href="https://maps.google.com/?q=Sengundhar+Samudhaya+Thirumana+Mandapam+Sholinghur" target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-cream border border-maroon text-maroon hover:bg-maroon hover:text-white transition-all text-xs font-semibold shadow-sm">
+            <a href="https://maps.google.com/?q=Sholinghur+Sengunthar+Mudaliyar+Thirumana+Mandapam,+4C9C%2BC5G,+Sengunther+Othavadai+St,+Sholinghur,+Tamil+Nadu+631102" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-cream border border-maroon text-maroon hover:bg-maroon hover:text-white transition-all text-xs font-semibold shadow-sm">
               <span class="mr-1.5 text-sm">📍</span>
-              <span>Navigate</span>
+              <span>Directions</span>
             </a>
-
-            <!-- Add to Calendar Button -->
-            <button onclick="addToCalendarMuhurtham()"
-              class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-gradient-to-r from-gold via-turmeric to-gold text-maroon font-bold hover:shadow-lg transition-all text-xs shadow-sm">
+            <button onclick="addToCalendarMuhurtham()" class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-gradient-to-r from-gold via-turmeric to-gold text-maroon font-bold hover:shadow-lg transition-all text-xs shadow-sm">
               <span class="mr-1.5 text-sm">📅</span>
               <span>Add to Calendar</span>
             </button>
           </div>
         </div>
       </div>
-
     </section>
 
     <!-- SECTION 5: VENUE MAP SECTION -->
-    <section id="map" class="px-4 py-8">
+    <section id="map" class="px-4 py-6">
       <div class="text-center mb-4">
         <span class="text-xs uppercase tracking-widest text-maroon font-bold font-serif">Directions</span>
         <h2 class="text-2xl font-playfair font-bold text-maroon mt-1">Wedding Venue</h2>
@@ -760,37 +539,27 @@
       </div>
 
       <div class="rounded-3xl border-2 border-gold/50 shadow-xl overflow-hidden bg-white">
-        <!-- Stylized Map View Header / Embed -->
+        <!-- Embedded Google Map -->
         <div class="relative h-52 bg-gray-200 overflow-hidden rounded-t-3xl">
-          <!-- Embedded Google Map or Stylized Map Canvas -->
-          <iframe title="Venue Location Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124414.28822509172!2d79.41581566378414!3d13.116125488107954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sSholinghur%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-            class="w-full h-full border-0" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-          <!-- Floating Venue Pin Badge -->
-          <div
-            class="absolute bottom-3 left-3 bg-[#0C4735] text-gold-light px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xl border border-gold/70 flex items-center space-x-1.5 backdrop-blur-md">
+          <iframe title="Venue Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.136423450371!2d79.4206584!3d13.0905391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52932f913d80db%3A0xe6cbef42fa916327!2sSengunthar%20Mudaliar%20Thirumana%20Mandabam!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="absolute bottom-3 left-3 bg-[#0C4735] text-gold-light px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-xl border border-gold/70 flex items-center space-x-1.5 backdrop-blur-md">
             <span>📍</span>
-            <span>Sengundhar Mandapam</span>
+            <span>Sengunthar Mandapam, Sholinghur</span>
           </div>
         </div>
 
-        <!-- Venue Details & Get Directions CTA -->
         <div class="p-5 bg-gradient-to-b from-[#FFFDF7] to-[#FBF6E9]">
-          <h4 class="font-playfair font-bold text-base text-maroon">Sengundhar Mandapam</h4>
+          <h4 class="font-playfair font-bold text-base text-maroon">Sholinghur Sengunthar Mudaliyar Thirumana Mandapam</h4>
           <p class="text-xs text-gray-600 mt-1 leading-relaxed">
-            Grand Kalyana Mandapam, Anna Salai Road, Chennai, Tamil Nadu – 600002
+            4C9C+C5G, Sengunther Othavadai St, Sholinghur, Tamil Nadu 631102
           </p>
           <div class="flex items-center space-x-2 text-xs text-gray-500 mt-2">
-            <span>🚗 Valet Parking Available</span>
+            <span>🚗 Parking Available</span>
             <span>•</span>
-            <span>❄️ Air Conditioned</span>
+            <span>❄️ Spacious Mandapam</span>
           </div>
 
-          <a href="https://maps.google.com/?q=Sengundhar+Samudhaya+Thirumana+Mandapam+Sholinghur" target="_blank"
-            rel="noopener noreferrer"
-            class="mt-4 w-full inline-flex items-center justify-center py-3 px-4 rounded-xl bg-maroon text-gold hover:bg-[#6E0A1B] transition-all text-xs font-bold tracking-wide shadow-md">
+          <a href="https://maps.google.com/?q=Sholinghur+Sengunthar+Mudaliyar+Thirumana+Mandapam,+4C9C%2BC5G,+Sengunther+Othavadai+St,+Sholinghur,+Tamil+Nadu+631102" target="_blank" rel="noopener noreferrer" class="mt-4 w-full inline-flex items-center justify-center py-3 px-4 rounded-xl bg-maroon text-gold hover:bg-[#6E0A1B] transition-all text-xs font-bold tracking-wide shadow-md">
             <span class="mr-2 text-sm">🧭</span>
             <span>Get Directions on Google Maps</span>
           </a>
@@ -798,157 +567,54 @@
       </div>
     </section>
 
-    <!-- SECTION 6: WHATSAPP RSVP SECTION -->
-    <section id="rsvp" class="px-4 py-8">
-      <div
-        class="bg-gradient-to-b from-[#FFFDF7] via-[#FFF9ED] to-[#FFFDF7] rounded-3xl p-6 border-2 border-gold shadow-2xl relative">
-
-        <div class="text-center mb-5">
-          <div
-            class="w-12 h-12 mx-auto mb-2 rounded-full bg-green-100 border border-green-400 flex items-center justify-center text-2xl shadow-sm">
-            💌
-          </div>
-          <h2 class="text-2xl font-playfair font-bold text-maroon">
-            RSVP &amp; Bless the Couple
-          </h2>
-          <p class="text-xs text-gray-600 mt-1">
-            Please let us know your presence so we can prepare your traditional feast!
-          </p>
-          <div class="w-12 h-0.5 bg-gold mx-auto mt-2"></div>
-        </div>
-
-        <form id="rsvpForm" onsubmit="handleRSVP(event)" class="space-y-4">
-          <!-- Guest Name Input -->
-          <div>
-            <label for="rsvpName" class="block text-xs font-semibold text-maroon mb-1">
-              Your Name / குடும்பத்தினர் பெயர்
-            </label>
-            <input type="text" id="rsvpName" placeholder="Enter your name"
-              class="w-full px-4 py-3 rounded-xl border border-gold/60 focus:border-maroon focus:ring-2 focus:ring-maroon/20 outline-none text-xs sm:text-sm bg-white shadow-sm"
-              required>
-          </div>
-
-          <!-- Number of Attendees Dropdown -->
-          <div>
-            <label for="rsvpCount" class="block text-xs font-semibold text-maroon mb-1">
-              Number of Attendees
-            </label>
-            <select id="rsvpCount"
-              class="w-full px-4 py-3 rounded-xl border border-gold/60 focus:border-maroon focus:ring-2 focus:ring-maroon/20 outline-none text-xs sm:text-sm bg-white shadow-sm">
-              <option value="1">1 Person (Just me)</option>
-              <option value="2" selected>2 Persons (Couple)</option>
-              <option value="3">3 Persons</option>
-              <option value="4">4 Persons (Family)</option>
-              <option value="5">5 Persons (Family)</option>
-              <option value="6">6 Persons</option>
-              <option value="7">7 Persons</option>
-              <option value="8">8 Persons</option>
-              <option value="9">9 Persons</option>
-              <option value="10">10+ Persons (Large Family)</option>
-            </select>
-          </div>
-
-          <!-- WhatsApp RSVP Confirmation Button -->
-          <button type="submit"
-            class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white font-bold text-sm shadow-lg hover:shadow-green-500/30 transform hover:-translate-y-0.5 active:translate-y-0 transition-all flex items-center justify-center space-x-2">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path
-                d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.044c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.112.551 4.095 1.517 5.823l-1.617 5.908 6.079-1.595c1.679.914 3.593 1.434 5.629 1.434 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z" />
-            </svg>
-            <span>Confirm via WhatsApp</span>
-          </button>
-        </form>
-
-        <p class="text-[11px] text-gray-500 text-center mt-3">
-          Host WhatsApp: +91 98765 43210
-        </p>
-      </div>
-    </section>
-
-    <!-- SECTION 7: FOOTER & LEAD GENERATION CARD -->
-    <section class="px-4 py-8">
-      <div
-        class="bg-gradient-to-br from-[#38050D]/95 via-[#570917]/95 to-[#1F0207]/95 rounded-3xl p-6 text-center text-cream border-2 border-gold/40 shadow-2xl relative overflow-hidden backdrop-blur-xl">
-
-        <!-- Glowing gradient backdrop -->
-        <div class="absolute -top-12 -right-12 w-32 h-32 bg-gold/20 rounded-full blur-2xl pointer-events-none"></div>
-
+    <!-- SECTION 6: FOOTER & LEAD GENERATION CARD -->
+    <section class="px-4 py-6">
+      <div class="bg-gradient-to-br from-[#38050D]/95 via-[#570917]/95 to-[#1F0207]/95 rounded-3xl p-6 text-center text-cream border-2 border-gold/40 shadow-2xl relative overflow-hidden backdrop-blur-xl">
         <span class="text-3xl mb-2 block">✨ 📱 ✨</span>
-
-        <h3 class="font-playfair text-xl font-bold text-gold-bright">
-          Loved this digital invitation?
-        </h3>
-
+        <h3 class="font-playfair text-xl font-bold text-gold-bright">Loved this digital invitation?</h3>
         <p class="text-xs text-cream/80 mt-1 mb-5 max-w-xs mx-auto leading-relaxed">
-          Get a beautiful custom wedding website with interactive gates, local language support, live RSVP &amp; Google
-          Maps for your special day!
+          Get a beautiful custom wedding website with traditional gate animations, multi-language support &amp; Google Maps for your special day!
         </p>
-
-        <!-- Developer CTA WhatsApp Button -->
-        <a href="https://wa.me/6304001448?text=Hi!%20I'd%20like%20a%20custom%20wedding%20website." target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-gold via-turmeric to-gold text-maroon font-bold text-xs shadow-lg hover:shadow-gold/50 transform hover:scale-105 transition-all space-x-2">
+        <a href="https://wa.me/918122543467?text=Hi!%20I'd%20like%20a%20custom%20wedding%20website." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-gold via-turmeric to-gold text-maroon font-bold text-xs shadow-lg hover:shadow-gold/50 transform hover:scale-105 transition-all space-x-2">
           <span>💬 Chat on WhatsApp</span>
         </a>
-
         <p class="text-[10px] text-cream/50 mt-4 tracking-wider uppercase">
-          Crafted with love for Sai Dinesh &amp; Janaki • 2026
+          Crafted with love for V.P. Sai Dinesh &amp; R. Janaki • 2026
         </p>
       </div>
     </section>
 
-    <!-- FLOATING MUTE / AUDIO BUTTON (Bottom Right above nav bar) -->
-    <button id="floatingAudioBtn" onclick="toggleAudio()"
-      class="fixed bottom-20 right-4 z-40 w-12 h-12 rounded-full bg-[#C0182A] text-gold border-2 border-gold shadow-2xl flex items-center justify-center transform hover:scale-110 active:scale-95 transition-all"
-      aria-label="Toggle Wedding Music">
+    <!-- FLOATING AUDIO BUTTON -->
+    <button id="floatingAudioBtn" onclick="toggleAudio()" class="fixed bottom-20 right-4 z-40 w-12 h-12 rounded-full bg-[#C0182A] text-gold border-2 border-gold shadow-2xl flex items-center justify-center transform hover:scale-110 active:scale-95 transition-all" aria-label="Toggle Wedding Music">
       <span id="floatingAudioIcon" class="text-xl">🔇</span>
-      <!-- Soundwave animation bars -->
-      <div id="soundwaveBars"
-        class="hidden absolute -top-1 -right-1 flex items-end space-x-0.5 bg-[#260309] p-1 rounded-full border border-gold/60">
+      <div id="soundwaveBars" class="hidden absolute -top-1 -right-1 flex items-end space-x-0.5 bg-[#260309] p-1 rounded-full border border-gold/60">
         <span class="w-1 bg-gold rounded-full wave-bar-1"></span>
         <span class="w-1 bg-gold rounded-full wave-bar-2"></span>
         <span class="w-1 bg-gold rounded-full wave-bar-3"></span>
       </div>
     </button>
 
-    <!-- STICKY BOTTOM NAVIGATION BAR -->
-    <nav
-      class="fixed bottom-0 inset-x-0 z-40 bg-white/92 backdrop-blur-2xl border-t border-gold/30 shadow-[0_-10px_35px_rgba(0,0,0,0.08)] safe-bottom max-w-[480px] mx-auto">
-      <div class="grid grid-cols-4 py-2 px-1 text-center">
-        <!-- Blessings Tab -->
-        <a href="#blessings"
-          class="nav-item flex flex-col items-center justify-center py-1 text-maroon hover:text-gold transition-colors">
+    <!-- STICKY BOTTOM NAVIGATION BAR (3 Clean Buttons) -->
+    <nav class="fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-2xl border-t border-gold/30 shadow-[0_-10px_35px_rgba(0,0,0,0.08)] safe-bottom max-w-[480px] mx-auto">
+      <div class="grid grid-cols-3 py-2 px-4 text-center">
+        <a href="#blessings" class="flex flex-col items-center justify-center py-1 text-maroon hover:text-gold transition-colors">
           <span class="text-lg">🙏</span>
-          <span class="text-[10px] font-semibold mt-0.5">Blessings</span>
+          <span class="text-[11px] font-semibold mt-0.5">Blessings</span>
         </a>
-
-        <!-- Events Tab -->
-        <a href="#events"
-          class="nav-item flex flex-col items-center justify-center py-1 text-maroon hover:text-gold transition-colors">
+        <a href="#events" class="flex flex-col items-center justify-center py-1 text-maroon hover:text-gold transition-colors">
           <span class="text-lg">📅</span>
-          <span class="text-[10px] font-semibold mt-0.5">Events</span>
+          <span class="text-[11px] font-semibold mt-0.5">Events</span>
         </a>
-
-        <!-- Map Tab -->
-        <a href="#map"
-          class="nav-item flex flex-col items-center justify-center py-1 text-maroon hover:text-gold transition-colors">
+        <a href="#map" class="flex flex-col items-center justify-center py-1 text-maroon hover:text-gold transition-colors">
           <span class="text-lg">📍</span>
-          <span class="text-[10px] font-semibold mt-0.5">Map</span>
-        </a>
-
-        <!-- RSVP Tab -->
-        <a href="#rsvp"
-          class="nav-item flex flex-col items-center justify-center py-1 text-maroon hover:text-gold transition-colors">
-          <span class="text-lg">💌</span>
-          <span class="text-[10px] font-semibold mt-0.5">RSVP</span>
+          <span class="text-[11px] font-semibold mt-0.5">Venue &amp; Map</span>
         </a>
       </div>
     </nav>
 
   </div>
 
-  <!-- JAVASCRIPT LOGIC -->
-  <script src="js/main.js" defer></script>
+  <!-- Modular JavaScript Engine -->
+  <script src="js/main.js"></script>
 </body>
-
 </html>

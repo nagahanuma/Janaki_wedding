@@ -281,14 +281,14 @@ function openGoogleCalendar(title, startUTC, endUTC, details, location) {
 function addToCalendarReception() {
   const lang = getCurrentLang();
   let title = 'Sai Dinesh & Janaki - Reception & Dinner';
-  let details = 'You are cordially invited to the Reception & Dinner of V.P. Sai Dinesh & R. Janaki on Sunday, November 15, 2026 from 7:00 PM onwards at Sengundhar Samudhaya Thirumana Mandapam, Sholinghur.';
+  let details = 'You are cordially invited to the Reception & Dinner of V.P. Sai Dinesh & R. Janaki on Sunday, November 15, 2026 from 7:00 PM onwards at Sholinghur Sengunthar Mudaliyar Thirumana Mandapam.';
 
   if (lang === 'te') {
     title = 'సాయి దినేష్ & జానకి - వివాహ రిసెప్షన్ & విందు';
-    details = 'వి.పి. సాయి దినేష్ మరియు ఆర్. జానకి గార్ల వివాహ రిసెప్షన్ & విందు కార్యక్రమానికి మిమ్ములను సకుటుంబ సమేతంగా ఆహ్వానిస్తున్నాము. తేదీ: ఆదివారం, నవంబర్ 15, 2026 సాయంత్రం 7:00 గంటల నుండి.';
+    details = 'వి.పి. సాయి దినేష్ మరియు ఆర్. జానకి గార్ల వివాహ రిసెప్షన్ & విందు కార్యక్రమానికి మిమ్ములను సకుటుంబ సమేతంగా ఆహ్వానిస్తున్నాము. వేదిక: శోళింగూర్ శెంగుందర్ మొదలియార్ తిరుమణ మండపం. తేదీ: ఆదివారం, నవంబర్ 15, 2026 సాయంత్రం 7:00 గంటల నుండి.';
   } else if (lang === 'ta') {
     title = 'சாய் தினேஷ் & ஜானகி - திருமண வரவேற்பு & விருந்து';
-    details = 'வி.பி. சாய் தினேஷ் & ஆர். ஜானகி திருமண வரவேற்பு மற்றும் இரவு விருந்து நன்னாளில் தாங்கள் குடும்ப சகிதமாக வருகை தந்து மணமக்களை வாழ்த்த அன்போடு அழைக்கின்றோம்.';
+    details = 'வி.பி. சாய் தினேஷ் & ஆர். ஜானகி திருமண வரவேற்பு மற்றும் இரவு விருந்து நன்னாளில் தாங்கள் குடும்ப சகிதமாக வருகை தந்து மணமக்களை வாழ்த்த அன்போடு அழைக்கின்றோம். இடம்: சோளிங்கர் செங்குந்தர் முதலியார் திருமண மண்டபம்.';
   }
 
   openGoogleCalendar(
@@ -296,21 +296,21 @@ function addToCalendarReception() {
     '20261115T133000Z',
     '20261115T173000Z',
     details,
-    'Sengundhar Samudhaya Thirumana Mandapam, Sholinghur, Tamil Nadu'
+    'Sholinghur Sengunthar Mudaliyar Thirumana Mandapam, 4C9C+C5G, Sengunther Othavadai St, Sholinghur, Tamil Nadu 631102'
   );
 }
 
 function addToCalendarUpanayanam() {
   const lang = getCurrentLang();
   let title = 'Sai Dinesh & Janaki - Upanayanam Ceremony';
-  let details = 'Sacred Upanayanam ceremony of V.P. Sai Dinesh on Monday, November 16, 2026 from 4:00 AM to 5:00 AM at Sengundhar Samudhaya Thirumana Mandapam, Sholinghur.';
+  let details = 'Sacred Upanayanam ceremony of V.P. Sai Dinesh on Monday, November 16, 2026 from 4:00 AM to 5:00 AM at Sholinghur Sengunthar Mudaliyar Thirumana Mandapam.';
 
   if (lang === 'te') {
     title = 'సాయి దినేష్ & జానకి - పవిత్ర ఉపనయన మహోత్సవం';
-    details = 'వి.పి. సాయి దినేష్ పవిత్ర ఉపనయన మహోత్సవం (యజ్ఞోపవీత ధారణ). తేదీ: సోమవారం, నవంబర్ 16, 2026 తెల్లవారుజామున 4:00 నుండి 5:00 గంటల వరకు.';
+    details = 'వి.పి. సాయి దినేష్ పవిత్ర ఉపనయన మహోత్సవం (యజ్ఞోపవీత ధారణ). వేదిక: శోళింగూర్ శెంగుందర్ మొదలియార్ తిరుమణ మండపం. తేదీ: సోమవారం, నవంబర్ 16, 2026 తెల్లవారుజామున 4:00 నుండి 5:00 గంటల వరకు.';
   } else if (lang === 'ta') {
     title = 'சாய் தினேஷ் & ஜானகி - சுப உபநயன விழா';
-    details = 'வி.பி. சாய் தினேஷ் உபநயன நன்னாள்: திங்கள், நவம்பர் 16, 2026 அதிகாலை 4:00 மணி முதல் 5:00 மணி வரை.';
+    details = 'வி.பி. சாய் தினேஷ் உபநயன நன்னாள்: திங்கள், நவம்பர் 16, 2026 அதிகாலை 4:00 மணி முதல் 5:00 மணி வரை. இடம்: சோளிங்கர் செங்குந்தர் முதலியார் திருமண மண்டபம்.';
   }
 
   openGoogleCalendar(
@@ -318,21 +318,21 @@ function addToCalendarUpanayanam() {
     '20261115T223000Z',
     '20261115T233000Z',
     details,
-    'Sengundhar Samudhaya Thirumana Mandapam, Sholinghur, Tamil Nadu'
+    'Sholinghur Sengunthar Mudaliyar Thirumana Mandapam, 4C9C+C5G, Sengunther Othavadai St, Sholinghur, Tamil Nadu 631102'
   );
 }
 
 function addToCalendarMuhurtham() {
   const lang = getCurrentLang();
   let title = '💍 Sai Dinesh & Janaki - Auspicious Wedding Muhurtham';
-  let details = 'Auspicious Wedding Ceremony (Muhurtham 5:00 AM – 6:00 AM) of V.P. Sai Dinesh & R. Janaki followed by traditional Kalyana Virundhu (Wedding Feast).';
+  let details = 'Auspicious Wedding Ceremony (Muhurtham 5:00 AM – 6:00 AM) of V.P. Sai Dinesh & R. Janaki followed by traditional Kalyana Virundhu at Sholinghur Sengunthar Mudaliyar Thirumana Mandapam.';
 
   if (lang === 'te') {
     title = '💍 సాయి దినేష్ & జానకి - శుభ కళ్యాణ ముహూర్తం';
-    details = 'వి.పి. సాయి దినేష్ మరియు ఆర్. జానకి గార్ల శుభ కళ్యాణ ముహూర్తం (మాంగల్యధారణ ఉదయం 5:00 నుండి 6:00 గంటల వరకు) అనంతరం సంప్రదాయ వివాహ భోజనం.';
+    details = 'వి.పి. సాయి దినేష్ మరియు ఆర్. జానకి గార్ల శుభ కళ్యాణ ముహూర్తం (మాంగల్యధారణ ఉదయం 5:00 నుండి 6:00 గంటల వరకు) అనంతరం సంప్రదాయ వివాహ భోజనం. వేదిక: శోళింగూర్ శెంగుందర్ మొదలియార్ తిరుమణ మండపం.';
   } else if (lang === 'ta') {
     title = '💍 சாய் தினேஷ் & ஜானகி - சுப கல்யாண முகூர்த்தம்';
-    details = 'வி.பி. சாய் தினேஷ் & ஆர். ஜானகி சுப கல்யாண முகூர்த்தம் (காலை 5:00 மணி முதல் 6:00 மணி வரை), தொடர்ந்து சுப கல்யாண விருந்து.';
+    details = 'வி.பி. சாய் தினேஷ் & ஆர். ஜானகி சுப கல்யாண முகூர்த்தம் (காலை 5:00 மணி முதல் 6:00 மணி வரை), தொடர்ந்து சுப கல்யாண விருந்து. இடம்: சோளிங்கர் செங்குந்தர் முதலியார் திருமண மண்டபம்.';
   }
 
   openGoogleCalendar(
@@ -340,7 +340,7 @@ function addToCalendarMuhurtham() {
     '20261115T233000Z',
     '20261116T023000Z',
     details,
-    'Sengundhar Samudhaya Thirumana Mandapam, Sholinghur, Tamil Nadu'
+    'Sholinghur Sengunthar Mudaliyar Thirumana Mandapam, 4C9C+C5G, Sengunther Othavadai St, Sholinghur, Tamil Nadu 631102'
   );
 }
 
@@ -500,3 +500,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize countdown
   initCountdown();
 });
+
